@@ -8,6 +8,7 @@ generate:
         - https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.js
         - js/particles.js
         - js/header.js
+        - js/scroll.js
         - coffee/site.coffee
 
 - style.css:
