@@ -1,0 +1,26 @@
+# Public Domain (-) 2015 The Wikifactory.net Website Authors.
+# See the Wikifactory.net UNLICENSE file for details.
+
+generate:
+
+- site.js:
+    source:
+        - https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.js
+        - js/particles.js
+        - js/header.js
+        - coffee/site.coffee
+
+- style.css:
+    source:
+        - coffee/style.coffee
+
+css.embed: false
+
+output.directory: www/static
+output.hashed: true
+output.manifest: assets.json
+
+profile.dev:
+  css.compress: false
+  js.compress: false
+  output.hashed: false
