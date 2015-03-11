@@ -1,7 +1,7 @@
 // Public Domain (-) 2015 The Wikifactory.net Website Authors.
 // See the Wikifactory.net UNLICENSE file for details.
 
-package main
+package wikifactory
 
 import (
 	"bytes"
@@ -9,15 +9,16 @@ import (
 	"fmt"
 	// "github.com/tav/golly/fsutil"
 	// "genlogo"
+	"net/http"
 	"os"
 	// "strconv"
 	// "strings"
 )
 
 const (
-	outputDirectory = "www"
-	tagline         = ""
-	cta			    = ""
+	outputDirectory	= "www"
+	tagline			= ""
+	cta				= ""
 )
 
 var (
@@ -188,7 +189,8 @@ func exit(args ...interface{}) {
 	os.Exit(1)
 }
 
-func main() {
+func handler(w http.ResponseWriter, r *http.Request) {
+
 
 	assetsFile, err := os.Open("assets.json")
 	if err != nil {
@@ -208,7 +210,7 @@ func main() {
 		if !exists {
 			exit("Cannot find %s in assets.json", key)
 		}
-		return "static/" + val
+		return "/static/" + val
 	}
 
 	buf := &bytes.Buffer{}
@@ -227,13 +229,8 @@ func main() {
 	o("<script src=http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>")
 	// HEADER
 	o("<header class=nav-down>")
-	o("<img src=gfx/w.png>")
+	o("<img src=/gfx/w.png>")
 	o("<nav>")
-	o("<ul>")
-	o("<li><a></a></li>")
-	o("<li><a></a></li>")
-	o("<li><a></a></li>")
-	o("</ul>")
 	o("</nav>")
 	o("</header>")
 	// PARTICLES + TAGLINE
@@ -249,17 +246,11 @@ func main() {
 	// CLOSE MAIN WRAPPER
 	o("</div>")//
 
-	// GENERATE INDEX.HTML
-	index, err := os.Create("www/index.html")
-	if err != nil {
-		exit(err)
-	}
+	// WRITE TO RESPONSE
+	w.Write(buf.Bytes())
 
-	_, err = index.Write(buf.Bytes())
-	if err != nil {
-		exit(err)
-	}
+}
 
-	fmt.Println(">> Generated www/index.html")
-
+func init() {
+    http.HandleFunc("/", handler)
 }

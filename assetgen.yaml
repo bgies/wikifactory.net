@@ -17,7 +17,7 @@ generate:
 
 css.embed: false
 
-output.directory: www/static
+output.directory: build
 output.hashed: true
 output.manifest: assets.json
 
