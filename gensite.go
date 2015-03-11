@@ -55,7 +55,6 @@ type Project struct {
 	YouTube  string
 }
 
-
 var Members = []*Person{
 	{
 		ID:       "tom",
@@ -106,6 +105,7 @@ var Members = []*Person{
 		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
 		Image:    "",
 	},
+}
 
 var Projects = []*Project{
 	{
