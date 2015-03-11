@@ -60,7 +60,7 @@ var Members = []*Person{
 	{
 		ID:       "tom",
 		Name:     "Tom Salfield",
-		Role:	  "Chief Technical Architect"
+		Role:	  "Chief Technical Architect",
 		GitHub:   "salfield",
 		LinkedIn: "pub/tom-salfield/19/893/258",
 		Twitter:  "tsalfield",
@@ -122,7 +122,7 @@ var Projects = []*Project{
 	{// Wikifactory Lab @iBox Chengdu, China.
 		Title:   "",
 		Link:    "",
-		Status:   "Launched",
+		Status:  "Launched",
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
@@ -131,7 +131,7 @@ var Projects = []*Project{
 	{// Wikifactory Innovation Hub at NIMI University Chengdu, China.
 		Title:   "",
 		Link:    "",
-		Status:   "Upcoming",
+		Status:  "Launching Q3 2015",
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
@@ -140,7 +140,7 @@ var Projects = []*Project{
 	{// Wikifactory China Courses.
 		Title:   "",
 		Link:    "",
-		Status:   "In development",
+		Status:  "In development",
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
@@ -149,7 +149,7 @@ var Projects = []*Project{
 	{// Wikifactory Innovation Hub London.
 		Title:   "",
 		Link:    "",
-		Status:   "In development",
+		Status:  "In development",
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
@@ -161,7 +161,6 @@ var Partners = []*Project{
 	{// Ethical Works
 		Title:    "",
 		Link:     "",
-		Year:     0,
 		Facebook: "",
 		GitHub:   "",
 		Twitter:  "",
@@ -171,7 +170,6 @@ var Partners = []*Project{
 	{// Nordic International Management Institute Chengdu
 		Title:    "",
 		Link:     "",
-		Year:     0,
 		Facebook: "",
 		GitHub:   "",
 		Twitter:  "",
