@@ -54,6 +54,54 @@ type Project struct {
 	YouTube  string
 }
 
+
+var Members = []*Person{
+	{
+		ID:       "tom",
+		Name:     "Tom Salfield",
+		GitHub:   "salfield",
+		LinkedIn: "pub/tom-salfield/19/893/258",
+		Twitter:  "tsalfield",
+		Text:     `Technical architect and software developer that is passionate about employing P2P and open source technologies to solve systemic problems and bring about a more open, sustainable economy.`,
+		Image:    "",
+	},
+	{
+		ID:       "christina",
+		Name:     "Christina Rebel",
+		LinkedIn: "in/christinarebel",
+		Twitter:  "christina_rebel",
+		Text:     `Constantly building on her range of skillsets - from web development to illustration, strategic planning to video production, and more - to see social innovation projects through early stages and beyond.`,
+		Image:    "",
+	},
+	{
+		ID:       "max",
+		Name:     "Maximilian Kampik",
+		GitHub:   "mkampik",
+		LinkedIn: "in/maximiliankampik",
+		Twitter:  "mkampik",
+		Text:     `Technologist and aspiring futurist that enjoys keeping up with the latest tech innovations and implementations. Has a background in politics and international relations.`,
+		Image:    "",
+	},
+	{
+		ID:       "tav",
+		Name:     "tav",
+		Link:     "http://tav.espians.com/",
+		GitHub:   "tav",
+		LinkedIn: "in/asktav",
+		Twitter:  "tav",
+		Text:     `Systems designer, entrepreneur and aspiring polymath. Spends his time innovating on the cutting edge of social, economic and<br> technological systems.`,
+		Image:    "",
+	},
+	{
+		ID:       "nicolai",
+		Name:     "Nicolai Peitersen",
+		LinkedIn: "pub/nicolai-peitersen/0/904/852",
+		Twitter:  "NPeitersen",
+		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
+		Image:    "",
+	},
+}
+
 var Projects = []*Project{
 	{
 		Title:    "Wikifactory Social Design Platform",
@@ -100,53 +148,6 @@ var Projects = []*Project{
 		Twitter: "",
 		YouTube: "",
 		Text:    ``,
-	},
-}
-
-var Members = []*Person{
-	{
-		ID:       "tom",
-		Name:     "Tom Salfield",
-		GitHub:   "salfield",
-		LinkedIn: "pub/tom-salfield/19/893/258",
-		Twitter:  "tsalfield",
-		Text:     `Technical architect and software developer that is passionate about employing P2P and open source technologies to solve systemic problems and bring about a more open, sustainable economy.`,
-		Image:    "",
-	},
-	{
-		ID:       "christina",
-		Name:     "Christina Rebel",
-		LinkedIn: "in/christinarebel",
-		Twitter:  "christina_rebel",
-		Text:     `Constantly building on her range of skillsets - from web development to illustration, strategic planning to video production, and more - to see social innovation projects through early stages and beyond.`,
-		Image:    "",
-	},
-	{
-		ID:       "max",
-		Name:     "Maximilian Kampik",
-		GitHub:   "mkampik",
-		LinkedIn: "in/maximiliankampik",
-		Twitter:  "mkampik",
-		Text:     `Technologist and aspiring futurist that enjoys keeping up with the latest tech innovations and implementations. Has a background in politics and international relations.`,
-		Image:    "",
-	},
-	{
-		ID:       "tav",
-		Name:     "tav",
-		Link:     "http://tav.espians.com/",
-		GitHub:   "tav",
-		LinkedIn: "in/asktav",
-		Twitter:  "tav",
-		Text:     `Systems designer, entrepreneur and aspiring polymath. Spends his time innovating on the cutting edge of social, economic and<br> technological systems.`,
-		Image:    "",
-	},
-	{
-		ID:       "nicolai",
-		Name:     "Nicolai Peitersen",
-		LinkedIn: "pub/nicolai-peitersen/0/904/852",
-		Twitter:  "NPeitersen",
-		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
-		Image:    "",
 	},
 }
 
