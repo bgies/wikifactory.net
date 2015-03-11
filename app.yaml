@@ -8,6 +8,6 @@ handlers:
   static_dir: gfx
 - url: /static
   static_dir: build
-  expiration: 30 days`
+  expiration: "30d"
 - url: /.*
   script: _go_app
