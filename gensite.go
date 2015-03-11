@@ -32,6 +32,7 @@ var (
 type Person struct {
 	ID       string
 	Name     string
+	Role	 string
 	Link     string
 	GitHub   string
 	LinkedIn string
@@ -43,7 +44,7 @@ type Person struct {
 type Project struct {
 	Title    string
 	Link     string
-	Year     int
+	Status   string
 	Facebook string
 	GitHub   string
 	Twitter  string
@@ -59,6 +60,7 @@ var Members = []*Person{
 	{
 		ID:       "tom",
 		Name:     "Tom Salfield",
+		Role:	  "Chief Technical Architect"
 		GitHub:   "salfield",
 		LinkedIn: "pub/tom-salfield/19/893/258",
 		Twitter:  "tsalfield",
@@ -68,6 +70,7 @@ var Members = []*Person{
 	{
 		ID:       "christina",
 		Name:     "Christina Rebel",
+		Role:	  "Business and User Experience",
 		LinkedIn: "in/christinarebel",
 		Twitter:  "christina_rebel",
 		Text:     `Constantly building on her range of skillsets - from web development to illustration, strategic planning to video production, and more - to see social innovation projects through early stages and beyond.`,
@@ -76,6 +79,7 @@ var Members = []*Person{
 	{
 		ID:       "max",
 		Name:     "Maximilian Kampik",
+		Role:	  "Technology and User Experience",
 		GitHub:   "mkampik",
 		LinkedIn: "in/maximiliankampik",
 		Twitter:  "mkampik",
@@ -85,6 +89,7 @@ var Members = []*Person{
 	{
 		ID:       "tav",
 		Name:     "tav",
+		Role:	  "Systems and Innovation",
 		Link:     "http://tav.espians.com/",
 		GitHub:   "tav",
 		LinkedIn: "in/asktav",
@@ -95,18 +100,27 @@ var Members = []*Person{
 	{
 		ID:       "nicolai",
 		Name:     "Nicolai Peitersen",
+		Role:	  "Business and User Experience",
 		LinkedIn: "pub/nicolai-peitersen/0/904/852",
 		Twitter:  "NPeitersen",
 		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
 		Image:    "",
 	},
-}
+		{
+		ID:       "nicolai",
+		Name:     "Nicolai Peitersen",
+		Role:	  "Business and User Experience",
+		LinkedIn: "pub/nicolai-peitersen/0/904/852",
+		Twitter:  "NPeitersen",
+		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
+		Image:    "",
+	},
 
 var Projects = []*Project{
 	{
 		Title:    "Wikifactory Social Design Platform",
 		Link:     "https://www.wikifactory.org/",
-		Year:     2014,
+		Status:   "In development",
 		Facebook: "wikifactory",
 		GitHub:   "tav/wikifactory",
 		Twitter:  "wikifactory",
@@ -116,7 +130,7 @@ var Projects = []*Project{
 	{// Wikifactory Lab @iBox Chengdu, China.
 		Title:   "",
 		Link:    "",
-		Year:    0,
+		Status:   "Launched",
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
@@ -125,7 +139,7 @@ var Projects = []*Project{
 	{// Wikifactory Innovation Hub at NIMI University Chengdu, China.
 		Title:   "",
 		Link:    "",
-		Year:    0,
+		Status:   "Upcoming",
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
@@ -134,7 +148,7 @@ var Projects = []*Project{
 	{// Wikifactory China Courses.
 		Title:   "",
 		Link:    "",
-		Year:    0,
+		Status:   "In development",
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
@@ -143,7 +157,7 @@ var Projects = []*Project{
 	{// Wikifactory Innovation Hub London.
 		Title:   "",
 		Link:    "",
-		Year:    0,
+		Status:   "In development",
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
