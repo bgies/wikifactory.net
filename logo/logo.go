@@ -1,7 +1,7 @@
 // Public Domain (-) 2014 The Wikifactory Authors.
 // See the Wikifactory UNLICENSE file for details.
 
-package genlogo
+package logo
 
 import (
 	"code.google.com/p/freetype-go/freetype/raster"
@@ -20,7 +20,7 @@ import (
 const (
 	dpi     = 300.0
 	text    = "Wikifactory"
-	width   = 1000
+	width   = 780
 	height  = 128
 	maxSize = 24
 )
@@ -54,12 +54,12 @@ func Render(size int, color *image.Uniform) (image.Image, error) {
 	for i := 0; i < len(text); i++ {
 		choice := (rand.Intn(variants) * len(text)) + i
 		glyph := glyphs[choice]
-		if i == 0 {
-			draw.DrawMask(img, invertGlyph.dr, color, image.ZP, color, invertGlyph.mp, draw.Over)
-			draw.DrawMask(img, invertGlyph.dr, image.White, image.ZP, invertGlyph.mask, invertGlyph.mp, draw.Over)
-		} else {
-			draw.DrawMask(img, glyph.dr, color, image.ZP, glyph.mask, glyph.mp, draw.Over)
-		}
+		// if i == 0 {
+		// 	draw.DrawMask(img, invertGlyph.dr, color, image.ZP, color, invertGlyph.mp, draw.Over)
+		// 	draw.DrawMask(img, invertGlyph.dr, image.White, image.ZP, invertGlyph.mask, invertGlyph.mp, draw.Over)
+		// } else {
+			draw.DrawMask(img, glyph.dr, image.White, image.ZP, glyph.mask, glyph.mp, draw.Over)
+		// }
 	}
 	return img, nil
 	// dst := image.NewRGBA(ctx)

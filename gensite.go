@@ -8,9 +8,12 @@ import (
 	"encoding/json"
 	"fmt"
 	// "github.com/tav/golly/fsutil"
-	// "genlogo"
 	"net/http"
 	"os"
+	"image"
+    "image/color"
+    "image/png"
+    "logo"
 	// "strconv"
 	// "strings"
 )
@@ -19,7 +22,10 @@ const (
 	outputDirectory	= "www"
 	tagline			= ""
 	cta				= ""
+	intro			= "We are a network of Technologists, Designers, Architects, Makers and Entrepreneurs. We are collaborating to bring about a more open, decentralised model of design and production."
 )
+
+var index []byte
 
 var (
 	header      = `<!doctype html>
@@ -187,9 +193,7 @@ func exit(args ...interface{}) {
 	os.Exit(1)
 }
 
-func handler(w http.ResponseWriter, r *http.Request) {
-
-
+func genSite() {
 	assetsFile, err := os.Open("assets.json")
 	if err != nil {
 		exit(err)
@@ -232,23 +236,45 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	o("</nav>")
 	o("</header>")
 	// PARTICLES + TAGLINE
-	o("<div id=particles-js><div class=wrapper><id=tagline><img src=" + "" + "></img></div>" + "</div>" + "</div>")
+	o("<div id=particles-js><div><img src=/logo.png></img></div></div>")
 	o("<script src=" + getPath("site.js") + " async></script>")
 	o("<script src=http://vincentgarreau.com/particles.js/particles.js></script>")
 	// MAIN CONTENT
 	o("<main>")
-	o("<div class=wrapper>")
+	o("<div>")
+	o("<div><h1>" + intro + "</h1></div>")
+	o("</div>")
 	o("</main")
 	// FOOTER
 	o("</footer>")
-	// CLOSE MAIN WRAPPER
-	o("</div>")//
 
-	// WRITE TO RESPONSE
-	w.Write(buf.Bytes())
+	index = buf.Bytes()
+}
+
+func handleIndex(w http.ResponseWriter, r *http.Request) {
+
+	w.Write(index)
 
 }
 
+func handleLogo(w http.ResponseWriter, req *http.Request) {
+        clr := image.NewUniform(color.RGBA{53, 44, 37, 255})
+        img, err := logo.Render(24, clr)
+        if err != nil {
+                fmt.Fprintf(w, "ERROR: %s\n", err)
+                return
+        }
+        err = png.Encode(w, img)
+        if err != nil {
+                fmt.Fprintf(w, "ERROR: %s\n", err)
+                return
+        }
+        w.Header().Set("Content-Type", "image/png")
+}
+
 func init() {
-    http.HandleFunc("/", handler)
+	genSite()
+	logo.Setup()
+	http.HandleFunc("/logo.png", handleLogo)
+    http.HandleFunc("/", handleIndex)
 }

@@ -23,68 +23,35 @@ module.exports = (api) ->
         body:
             margin: 0
             padding: 0
-            paddingTop: '60px'
+            # paddingTop: '60px'
             textRendering: 'optimizeLegibility'
 
         h1:
             fontFamily: 'Montserrat'
             fontWeight: 400
-            fontSize: ''
-            color: ''
+            fontSize: '2.5vw'
+            lineHeight: '1.6'
+            color: '#7a797a'
             letterSpacing: ''
-
-        h2:
-            fontFamily: 'Montserrat'
-            fontSize: '26px'
-            fontWeight: 400
-            lineHeight: 1.3
-            color: '#2b2b2b'
             textAlign: 'center'
-            marginTop: '50px'
-            marginBottom: '50px'
-            clear: 'both'
 
-        h3:
-            fontFamily:'Merriweather Sans'
-            fontSize: '21px'
-            fontWeight: 400
-            lineHeight: 1.3
-            marginBottom: 0
+        # h2:
+        #     fontFamily: 'Montserrat'
+        #     fontSize: '26px'
+        #     fontWeight: 400
+        #     lineHeight: 1.3
+        #     color: '#2b2b2b'
+        #     textAlign: 'center'
+        #     marginTop: '50px'
+        #     marginBottom: '50px'
+        #     clear: 'both'
+        #
 
-        p:
-            fontFamily: 'Merriweather'
-            fontSize:'14px'
-            fontWeight: 300
-            padding: 0
-            margin: 0
+        # 'a::selection':
+        #    color: '#fff'
 
-        a:
-            fontFamily: 'Merriweather'
-            fontSize:'14px'
-            fontWeight: 400
-            color: '#cc0000'
-            textDecoration: 'none'
-
-        'a::selection':
-           color: '#fff'
-
-        '::selection':
-            background: 'rgba(204,0,0,0.7)'
-
-        tbody:
-            # borderSpacing: '0px !important'
-            # borderCollapse: 'collapse'
-            width: '100%'
-
-        tr:
-            width: '100%'
-
-        td:
-            paddingTop: '0px'
-            marginTop: '0px'
-
-        footer:
-            clear:'both'
+        # '::selection':
+        #     background: 'rgba(204,0,0,0.7)'
 
         # HEADER
          header:
@@ -119,10 +86,18 @@ module.exports = (api) ->
         '#particles-js':
             backgroundColor: '#0274B8' # Wikifactory Blue.
             color: '#ffffff'
-            height: '500px'
+            height: '600px'
+
+        '#particles-js div':
+            width: '780px'
+            margin: '0 auto'
+
+        '#particles-js img':
+            pointerEvents: 'none'
+            position: 'absolute'
+            top: '200px'
 
         # MAIN WRAPPER
-        '.wrapper':
+        'main div':
+            width: '90vw'
             margin: '0 auto'
-            width: '990px'
-            clear: 'left'
