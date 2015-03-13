@@ -5,7 +5,7 @@ particlesJS('particles-js', {
         opacity: 1,
         size: 2,
         size_random: true,
-        nb: 120,
+        nb: 121,
         line_linked: {
             enable_auto: true,
             distance: 250,
@@ -26,7 +26,7 @@ particlesJS('particles-js', {
     interactivity: {
         enable: true,
         mouse: {
-            distance: 100
+            distance: 110
         },
         mode: 'grab'
     },

@@ -22,7 +22,8 @@ const (
 	outputDirectory	= "www"
 	tagline			= ""
 	cta				= ""
-	intro			= "We are a network of Technologists, Designers, Architects, Makers and Entrepreneurs. We are collaborating to bring about a more open, decentralised model of design and production."
+	whatOne			= "An entrepreneurial network of technologists, hackers, designers, architects and makers."
+	whatTwo 		= "Working towards a more open and empowering model of collaboration for digital fabrication projects."
 )
 
 var index []byte
@@ -229,52 +230,74 @@ func genSite() {
 	o("<link rel=stylesheet href=" + getPath("style.css") + ">")
 	o("<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>")
 	o("<script src=http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>")
-	// HEADER
-	o("<header class=nav-down>")
+	// NAVBAR
+	o("<header class=nav-up>")
 	o("<img src=/gfx/w.png>")
 	o("<nav>")
+	o("<ul>")
+	o("<li><h4 class=cta>JOIN</h4></li>")
+	o("<li><h4>WHY</h4></li>")
+	o("<li><h4>WHO</h4></li>")
+	o("<li><h4>HOW</h4></li>")
+	o("<li><h4>WHAT</h4></li>")
+	o("</ul>")
 	o("</nav>")
 	o("</header>")
-	// PARTICLES + TAGLINE
-	o("<div id=particles-js><div><img src=/logo.png></img></div></div>")
+	// PARTICLES
+	o("<div id=particles-js><div><img src=/logo.png></img></div></div><div><img class=arrow src=/gfx/arrow.png></img></div>")
 	o("<script src=" + getPath("site.js") + " async></script>")
 	o("<script src=http://vincentgarreau.com/particles.js/particles.js></script>")
 	// MAIN CONTENT
 	o("<main>")
+	// WHAT
+	o("<section id=what>")
 	o("<div>")
-	o("<div><h1>" + intro + "</h1></div>")
+	o("<div class=intro><h1>" + whatOne + "</h1></div>")
+	o("<div class=intro><h1>" + whatTwo + "</h1></div>")
 	o("</div>")
-	o("</main")
+	o("</section")
+	// HOW
+	o("<section>")
+	o("</section>")
+	// WHO
+	o("<section>")
+	o("</section>")
+	// WHY
+	o("<section>")
+	o("</section>")
+	// JOIN
+	o("<section>")
+	o("</section>")
+	o("</main>")
 	// FOOTER
+	o("<footer>")
 	o("</footer>")
-
+	// WRITE TO BUF
 	index = buf.Bytes()
 }
 
 func handleIndex(w http.ResponseWriter, r *http.Request) {
-
 	w.Write(index)
-
 }
 
 func handleLogo(w http.ResponseWriter, req *http.Request) {
-        clr := image.NewUniform(color.RGBA{53, 44, 37, 255})
-        img, err := logo.Render(24, clr)
-        if err != nil {
-                fmt.Fprintf(w, "ERROR: %s\n", err)
-                return
-        }
-        err = png.Encode(w, img)
-        if err != nil {
-                fmt.Fprintf(w, "ERROR: %s\n", err)
-                return
-        }
-        w.Header().Set("Content-Type", "image/png")
+    clr := image.NewUniform(color.RGBA{53, 44, 37, 255})
+    img, err := logo.Render(24, clr)
+    if err != nil {
+            fmt.Fprintf(w, "ERROR: %s\n", err)
+            return
+    }
+    err = png.Encode(w, img)
+    if err != nil {
+            fmt.Fprintf(w, "ERROR: %s\n", err)
+            return
+    }
+    w.Header().Set("Content-Type", "image/png")
 }
 
 func init() {
-	genSite()
 	logo.Setup()
+	genSite()
 	http.HandleFunc("/logo.png", handleLogo)
     http.HandleFunc("/", handleIndex)
 }

@@ -29,23 +29,23 @@ module.exports = (api) ->
         h1:
             fontFamily: 'Montserrat'
             fontWeight: 400
-            fontSize: '2.5vw'
+            fontSize: '2.4vw'
             lineHeight: '1.6'
-            color: '#7a797a'
+            color: '#3c3c3c'
             letterSpacing: ''
             textAlign: 'center'
 
-        # h2:
-        #     fontFamily: 'Montserrat'
-        #     fontSize: '26px'
-        #     fontWeight: 400
-        #     lineHeight: 1.3
-        #     color: '#2b2b2b'
-        #     textAlign: 'center'
-        #     marginTop: '50px'
-        #     marginBottom: '50px'
-        #     clear: 'both'
-        #
+        h4: #NAV
+            fontFamily: 'Montserrat'
+            fontSize: '14px'
+            fontWeight: 400
+            color: '#6e6e6e'
+            marginTop: '5px'
+            marginLeft: '25px'
+
+        'h4:hover':
+            cursor: 'pointer'
+            borderBottom: '1px solid #6e6e6e'
 
         # 'a::selection':
         #    color: '#fff'
@@ -65,7 +65,7 @@ module.exports = (api) ->
             boxShadow: '0 1px 10px rgba(0, 0, 0, 0.1)'
 
         '.nav-up':
-            top: '-60px'
+            top: '-61px'
 
         'header img':
             width: '42px'
@@ -86,7 +86,7 @@ module.exports = (api) ->
         '#particles-js':
             backgroundColor: '#0274B8' # Wikifactory Blue.
             color: '#ffffff'
-            height: '600px'
+            height: '98vh'
 
         '#particles-js div':
             width: '780px'
@@ -95,9 +95,41 @@ module.exports = (api) ->
         '#particles-js img':
             pointerEvents: 'none'
             position: 'absolute'
-            top: '200px'
+            top: '30vh'
+
+        '.bounce':
+            animation: 'bounce 1s infinite'
+            WebkitAnimation: 'bounce 1s infinite'
+
+        '.arrow':
+            bottom: '20px'
+            width: '50px'
+            height: '50px'
+            marginLeft: 'calc(50% - 25px)'
+            position: 'absolute'
 
         # MAIN WRAPPER
-        'main div':
-            width: '90vw'
+        section:
+            paddingTop: '20px'
+            width: '85vw'
             margin: '0 auto'
+
+        'nav ul':
+            listStyle: 'none'
+            float: 'right'
+            position: 'absolute'
+            right: '25px'
+            top: 0
+
+        'nav ul li':
+            float: 'right'
+
+        '.cta':
+            color: '#0274B8'
+
+        '.cta:hover':
+            borderBottom: '1px solid #0274B8'
+            cursor: 'pointer'
+
+        '.intro h1':
+            marginTop: '50px'
