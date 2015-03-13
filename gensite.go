@@ -250,13 +250,14 @@ func genSite() {
 	// MAIN CONTENT
 	o("<main>")
 	// WHAT
-	o("<section id=what>")
-	o("<div>")
+	o("<section>")
+	o("<div class=tag id=what>")
 	o("<div class=intro><h1>" + whatOne + "</h1></div>")
 	o("<div class=intro><h1>" + whatTwo + "</h1></div>")
 	o("</div>")
-	o("<div class=nodes>")
-	o("<img src=/gfx/nodes.png>")
+	// HOW
+	o("<div class=nodes id=how>")
+	o("<img class=tag src=/gfx/nodes.png>")
 	o("<div class=nodes-text>")
 	o("<div class=nodes-text-one><h2>ONLINE<br>SOCIAL DESIGN PLATFORM</h2></div>")
 	o("<div class=nodes-text-two><h2>PHYSICAL<br>COLLABORATION SPACES</h2></div>")

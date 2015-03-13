@@ -10,6 +10,7 @@ generate:
         - js/fade.js
         - js/header.js
         - js/scroll.js
+        - js/url.js
         - coffee/site.coffee
 
 - style.css:
