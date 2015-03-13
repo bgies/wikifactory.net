@@ -10,10 +10,12 @@ This is the organisational website for Wikifactory Ltd.
 
     pip install https://pypi.python.org/packages/source/a/assetgen/assetgen-0.3.7.tar.gz
 
-3.) In the root directory, run `assetgen` to generate the js and css assets.
+3.) From the root directory:
 
-4.) Initialise the development web server with `path/to/appengine/dev_appserver .`
+- run `assetgen` to generate the js and css assets.
 
-5.) View the site at `http://localhost:8080/`.
+- initialise the development web server with `path/to/appengine/dev_appserver .`
+
+4.) View the site at `http://localhost:8080/`.
 
 NB: During development, you can run `assetgen --profile dev --watch` to have your assets regenerated automatically everytime you update the sources.
