@@ -10,12 +10,14 @@ This is the organisational website for Wikifactory Ltd.
 
     pip install https://pypi.python.org/packages/source/a/assetgen/assetgen-0.3.7.tar.gz
 
-3.) From the root directory:
+3.) Install freetype-go with: `go get code.google.com/p/freetype-go/freetype`.
+
+4.) From the root directory:
 
 - run `assetgen` to generate the js and css assets.
 
 - initialise the development web server with `path/to/appengine/dev_appserver .`
 
-4.) View the site at `http://localhost:8080/`.
+5.) View the site at `http://localhost:8080/`.
 
 NB: During development, you can run `assetgen --profile dev --watch` to have your assets regenerated automatically everytime you update the sources.
