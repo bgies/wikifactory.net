@@ -35,6 +35,13 @@ module.exports = (api) ->
             letterSpacing: ''
             textAlign: 'center'
 
+        h2:
+            fontFamily: 'Montserrat'
+            fontWeight: 400
+            fontSize: '1.8vw'
+            color: '#6e6e6e'
+            textAlign: 'center'
+
         h4: #NAV
             fontFamily: 'Montserrat'
             fontSize: '14px'
@@ -97,10 +104,6 @@ module.exports = (api) ->
             position: 'absolute'
             top: '30vh'
 
-        '.bounce':
-            animation: 'bounce 1s infinite'
-            WebkitAnimation: 'bounce 1s infinite'
-
         '.arrow':
             bottom: '20px'
             width: '50px'
@@ -131,5 +134,47 @@ module.exports = (api) ->
             borderBottom: '1px solid #0274B8'
             cursor: 'pointer'
 
+        # WHAT
         '.intro h1':
             marginTop: '50px'
+
+        '.nodes':
+            width: '100vw'
+            position: 'absolute'
+            left: 0
+            marginTop: '40px'
+            marginBottom: '40px'
+
+        '.nodes img':
+            width: '100%'
+            height: 'auto'
+
+        '.nodes-text':
+            position: 'absolute'
+            top: '3vw'
+            width: '100vw'
+            height: 'auto'
+
+        'div.nodes-text-one':
+            width: '30%'
+            position: 'absolute'
+            top: '3vw'
+            left: '9vw'
+
+        'div.nodes-text-two':
+            width: '30%'
+            position: 'absolute'
+            top: '3vw'
+            right: '9vw'
+
+        'div.nodes-text-three':
+            width: '30%'
+            position: 'absolute'
+            top: '16vw'
+            left: '18vw'
+
+        'div.nodes-text-four':
+            width: '30%'
+            position: 'absolute'
+            top: '16vw'
+            right: '18vw'

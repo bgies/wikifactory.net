@@ -22,7 +22,7 @@ const (
 	outputDirectory	= "www"
 	tagline			= ""
 	cta				= ""
-	whatOne			= "An entrepreneurial network of technologists, hackers, designers, architects and makers."
+	whatOne			= "A global, entrepreneurial network of strategists, technologists, designers, architects and makers."
 	whatTwo 		= "Working towards a more open and empowering model of collaboration for digital fabrication projects."
 )
 
@@ -244,7 +244,7 @@ func genSite() {
 	o("</nav>")
 	o("</header>")
 	// PARTICLES
-	o("<div id=particles-js><div><img src=/logo.png></img></div></div><div><img class=arrow src=/gfx/arrow.png></img></div>")
+	o("<div id=particles-js><div><img src=/logo.png></img></div></div><div class=bounce><img class=arrow src=/gfx/arrow.png></img></div>")
 	o("<script src=" + getPath("site.js") + " async></script>")
 	o("<script src=http://vincentgarreau.com/particles.js/particles.js></script>")
 	// MAIN CONTENT
@@ -255,19 +255,17 @@ func genSite() {
 	o("<div class=intro><h1>" + whatOne + "</h1></div>")
 	o("<div class=intro><h1>" + whatTwo + "</h1></div>")
 	o("</div>")
+	o("<div class=nodes>")
+	o("<img src=/gfx/nodes.png>")
+	o("<div class=nodes-text>")
+	o("<div class=nodes-text-one><h2>ONLINE<br>SOCIAL DESIGN PLATFORM</h2></div>")
+	o("<div class=nodes-text-two><h2>PHYSICAL<br>COLLABORATION SPACES</h2></div>")
+	o("<div class=nodes-text-three><h2>TRAINING<br>& WORKSHOPS</h2></div>")
+	o("<div class=nodes-text-four><h2>PROJECT<br>INCUBATION</h2></div>")
+	o("</div>")
+	o("</div>")
 	o("</section")
 	// HOW
-	o("<section>")
-	o("</section>")
-	// WHO
-	o("<section>")
-	o("</section>")
-	// WHY
-	o("<section>")
-	o("</section>")
-	// JOIN
-	o("<section>")
-	o("</section>")
 	o("</main>")
 	// FOOTER
 	o("<footer>")
