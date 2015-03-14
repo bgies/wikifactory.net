@@ -9,5 +9,9 @@ handlers:
 - url: /static
   static_dir: build
   expiration: "30d"
+- url: /favicon.ico
+  static_files: gfx/favicon.ico
+  upload: gfx/favicon.ico
+  expiration: "1d"
 - url: /.*
   script: _go_app
