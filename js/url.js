@@ -8,7 +8,7 @@ $(function () {
             var hash = $(this).attr('id');
             // 30 is an arbitrary padding choice,
             // if you want a precise check then use distance===0
-            if (distance < 80 && distance > -20 && currentHash != hash) {
+            if (distance < 80 && distance > -10 && currentHash != hash) {
                 window.location.hash = (hash);
                 currentHash = hash;
             }

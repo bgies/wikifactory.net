@@ -46,13 +46,13 @@ module.exports = (api) ->
             fontFamily: 'Montserrat'
             fontSize: '14px'
             fontWeight: 400
-            color: '#6e6e6e'
+            color: '#3c3c3c'
             marginTop: '5px'
             marginLeft: '25px'
 
         'h4:hover':
             cursor: 'pointer'
-            borderBottom: '1px solid #6e6e6e'
+            borderBottom: '1px solid #3c3c3c'
 
         # 'a::selection':
         #    color: '#fff'
@@ -111,7 +111,7 @@ module.exports = (api) ->
             marginLeft: 'calc(50% - 25px)'
             position: 'absolute'
 
-        # MAIN WRAPPER
+        #MAIN WRAPPER
         section:
             paddingTop: '20px'
             width: '85vw'
@@ -178,3 +178,6 @@ module.exports = (api) ->
             position: 'absolute'
             top: '16vw'
             right: '18vw'
+
+        footer:
+            width: '500px'
