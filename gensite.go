@@ -127,6 +127,7 @@ var Projects = []*Project{
 		Twitter:  "wikifactory",
 		YouTube:  "WikifactoryMovement",
 		Text:     ``,
+		Image:    "",
 		CTO:	  "",
 	},
 	{
@@ -137,6 +138,7 @@ var Projects = []*Project{
 		Twitter: "",
 		YouTube: "",
 		Text:    "Our China HQ at the heart of Chengdu’s latest creative hub, alongside art galleries, artisan workshops and coworking spaces as well as cafés and restaurants.<br>A space to bring together a community around digital fabrication, offering access to 3D printers, desk space and business incubation support to launch new product ideas that have a social impact.",
+		Image:    "labchengdu.jpg",
 		CTO:	 "Want to start a lab?",
 	},
 	{
@@ -147,6 +149,7 @@ var Projects = []*Project{
 		Twitter: "",
 		YouTube: "",
 		Text:    "We are collaborating with education experts in China to develop and deliver a learning programme around entrepreneurship, design and 3D printing at 10 universities across 5 provinces in China.<br>Over 2,000 students will be introduced and given access to digital fabrication technologies in developing more sustainable, innovative products through seminars and workshops.<br>Participating students will be encouraged to form teams and pitch their product ideas to receive mentorship from experienced pioneers in the industry and continue prototyping!",
+ 		Image:    "printingthefuture.jpg",
  		Partners:"",
  		CTO:	 "Want to partner with us?",
 	},
@@ -158,6 +161,7 @@ var Projects = []*Project{
 		Twitter: "",
 		YouTube: "",
 		Text:    "In time for summer, architects and designers are coming together to prototype the first WikiHouse in China. Launching in the rooftop space of the Wikifactory Lab to provide a relaxed environment for makers of Chengdu.<br>We will be launching our chapter of WikiHouse China to drive open innovation in architecture for social and environmental impact. With Sichuan being both the bamboo region of China and affected by earthquakes every year, we will explore how to develop earthquake resistant shelters with more sustainable plywood fibres to help rebuild communities.",
+ 		Image:    "wikihouseCN.jpg",
  		Partners:"",
  		CTO:	 "Want to be notified of our launch?",
 	},
@@ -169,6 +173,7 @@ var Projects = []*Project{
 		Twitter: "",
 		YouTube: "",
 		Text:    "At NIMI we are developing a multi-purpose innovation space, hosting a public facing exhibition in the future of design and production, as well as offering professional training and digital fabrication-as-a-service.<br>In training young talent in digital fabrication in a range of technologies from stereolithography to laser cutting, the Innovation Hub will support local businesses and industry to adopt these in their supply chains. A co-working and fully-equipped workshop space will also be open for local maker and hardware communities.",
+		Image:   "nimi.jpg",
 		Partners:"",
 		CTO:	 "Want to be a resident maker?",
 	},
@@ -275,7 +280,7 @@ func genSite() {
 	o("<div class=device-wrapper><img class=devices src=/gfx/devices.png></div>")
 
 	renderProject := func(p *Project, next *Project) {
-		o("<div><img></div>")
+		o("<div><img src=/gfx/" + p.Image + "></div>")
 		o("<div>")
 		o("<h2>" + p.Title + "</h2>")
 		o("<h5>" + p.Status + "</h5>")
