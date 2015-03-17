@@ -61,6 +61,8 @@ type Project struct {
 	Position string
 	Area     string
 	YouTube  string
+	Partners string
+	CTO      string
 }
 
 var Members = []*Person{
@@ -125,42 +127,50 @@ var Projects = []*Project{
 		Twitter:  "wikifactory",
 		YouTube:  "WikifactoryMovement",
 		Text:     ``,
+		CTO:	  "",
 	},
-	{// Wikifactory Lab @iBox Chengdu, China.
+	{
 		Title:   "Wikifactory Lab @iBox Chengdu, China",
 		Link:    "",
-		Status:  "Launched",
+		Status:  "Launched Q3 2014",
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
-		Text:    ``,
+		Text:    "Our China HQ at the heart of Chengdu’s latest creative hub, alongside art galleries, artisan workshops and coworking spaces as well as cafés and restaurants.<br>A space to bring together a community around digital fabrication, offering access to 3D printers, desk space and business incubation support to launch new product ideas that have a social impact.",
+		CTO:	 "Want to start a lab?",
 	},
-	{// Wikifactory Innovation Hub at NIMI University Chengdu, China.
-		Title:   "Wikifactory Innovation Hub @ NIMI University Chengdu, China",
-		Link:    "",
-		Status:  "Launching Q3 2015",
-		GitHub:  "",
-		Twitter: "",
-		YouTube: "",
-		Text:    ``,
-	},
-	{// Wikifactory China Courses.
+	{
 		Title:   "Printing the Future",
 		Link:    "",
 		Status:  "Launching Q3 2015",
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
-		Text:    ``,
+		Text:    "We are collaborating with education experts in China to develop and deliver a learning programme around entrepreneurship, design and 3D printing at 10 universities across 5 provinces in China.<br>Over 2,000 students will be introduced and given access to digital fabrication technologies in developing more sustainable, innovative products through seminars and workshops.<br>Participating students will be encouraged to form teams and pitch their product ideas to receive mentorship from experienced pioneers in the industry and continue prototyping!",
+ 		Partners:"",
+ 		CTO:	 "Want to partner with us?",
 	},
-	{// Wikifactory Innovation Hub London.
-		Title:   "Innovation Hub London",
+	{
+		Title:   "WikiHouse China - Rooftop 1.0 @ iBOX Chengdu",
 		Link:    "",
-		Status:  "In development",
+		Status:  "Launching Q2 2015",
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
-		Text:    ``,
+		Text:    "In time for summer, architects and designers are coming together to prototype the first WikiHouse in China. Launching in the rooftop space of the Wikifactory Lab to provide a relaxed environment for makers of Chengdu.<br>We will be launching our chapter of WikiHouse China to drive open innovation in architecture for social and environmental impact. With Sichuan being both the bamboo region of China and affected by earthquakes every year, we will explore how to develop earthquake resistant shelters with more sustainable plywood fibres to help rebuild communities.",
+ 		Partners:"",
+ 		CTO:	 "Want to be notified of our launch?",
+	},
+	{
+		Title:   "Wikifactory Innovation Hub @ NIMI Chengdu, China",
+		Link:    "",
+		Status:  "Launching Q3 2015",
+		GitHub:  "",
+		Twitter: "",
+		YouTube: "",
+		Text:    "At NIMI we are developing a multi-purpose innovation space, hosting a public facing exhibition in the future of design and production, as well as offering professional training and digital fabrication-as-a-service.<br>In training young talent in digital fabrication in a range of technologies from stereolithography to laser cutting, the Innovation Hub will support local businesses and industry to adopt these in their supply chains. A co-working and fully-equipped workshop space will also be open for local maker and hardware communities.",
+		Partners:"",
+		CTO:	 "Want to be a resident maker?",
 	},
 }
 
