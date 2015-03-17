@@ -117,7 +117,7 @@ var Members = []*Person{
 
 var Projects = []*Project{
 	{
-		Title:    "Wikifactory Social Design Platform",
+		Title:    "Social Design Platform",
 		Link:     "https://www.wikifactory.org/",
 		Status:   "Beta launching Q2 2015",
 		Facebook: "wikifactory",
@@ -127,7 +127,7 @@ var Projects = []*Project{
 		Text:     ``,
 	},
 	{// Wikifactory Lab @iBox Chengdu, China.
-		Title:   "",
+		Title:   "Wikifactory Lab @iBox Chengdu, China",
 		Link:    "",
 		Status:  "Launched",
 		GitHub:  "",
@@ -136,7 +136,7 @@ var Projects = []*Project{
 		Text:    ``,
 	},
 	{// Wikifactory Innovation Hub at NIMI University Chengdu, China.
-		Title:   "",
+		Title:   "Wikifactory Innovation Hub @ NIMI University Chengdu, China",
 		Link:    "",
 		Status:  "Launching Q3 2015",
 		GitHub:  "",
@@ -145,16 +145,16 @@ var Projects = []*Project{
 		Text:    ``,
 	},
 	{// Wikifactory China Courses.
-		Title:   "",
+		Title:   "Printing the Future",
 		Link:    "",
-		Status:  "In development",
+		Status:  "Launching Q3 2015",
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
 		Text:    ``,
 	},
 	{// Wikifactory Innovation Hub London.
-		Title:   "",
+		Title:   "Innovation Hub London",
 		Link:    "",
 		Status:  "In development",
 		GitHub:  "",
@@ -263,6 +263,22 @@ func genSite() {
 	o("<div>")
 	o("<h2>Projects</h2>")
 	o("<div class=device-wrapper><img class=devices src=/gfx/devices.png></div>")
+
+	renderProject := func(p *Project, next *Project) {
+		o("<div><img></div>")
+		o("<div>")
+		o("<h2>" + p.Title + "</h2>")
+		o("<h5>" + p.Status + "</h5>")
+		o("<p>" + p.Text + "</p>")
+		o("</div>")
+	}
+
+	for _, project := range Projects {
+		renderProject(project, nil)
+	}
+
+
+
 	o("</div>")
 	// WHO
 	// FOOTER

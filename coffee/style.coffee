@@ -54,6 +54,12 @@ module.exports = (api) ->
             cursor: 'pointer'
             borderBottom: '1px solid #3c3c3c'
 
+        h5:
+            fontFamily: 'Montserrat'
+            fontSize: '1.2vw'
+            color: '#0274B8'
+            textAlign: 'center'
+
         # 'a::selection':
         #    color: '#fff'
 
