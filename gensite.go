@@ -131,7 +131,7 @@ var Projects = []*Project{
 		CTO:	  "",
 	},
 	{
-		Title:   "Wikifactory Lab @iBox Chengdu, China",
+		Title:   "Wikifactory @iBox Chengdu, China",
 		Link:    "",
 		Status:  "Launched Q3 2014",
 		GitHub:  "",
@@ -139,7 +139,8 @@ var Projects = []*Project{
 		YouTube: "",
 		Image:   "labchengdu.jpg",
 		Text:    "Our China HQ at the heart of Chengdu’s latest creative hub, alongside art galleries, artisan workshops and coworking spaces as well as cafés and restaurants.<br><br>A space to bring together a community around digital fabrication, offering access to 3D printers, desk space and business incubation support to launch new product ideas that have a social impact.",
-		CTO:	 "Want to start a lab?",
+		Partners:"WikihouseCN_logo_black.png",
+		CTO:	 "Start a Wikifactory in your city",
 	},
 	{
 		Title:   "Printing the Future",
@@ -150,8 +151,8 @@ var Projects = []*Project{
 		YouTube: "",
  		Image:   "printingthefuture.jpg",
 		Text:    "We are collaborating with education experts in China to develop and deliver a learning programme around entrepreneurship, design and 3D printing at 10 universities across 5 provinces in China.<br><br>Over 2,000 students will be introduced and given access to digital fabrication technologies in developing more sustainable, innovative products through seminars and workshops.<br><br>Participating students will be encouraged to form teams and pitch their product ideas to receive mentorship from experienced pioneers in the industry and continue prototyping!",
- 		Partners:"",
- 		CTO:	 "Want to partner with us?",
+ 		Partners:"CYDF-logo.png",
+ 		CTO:	 "Partner with us",
 	},
 	{
 		Title:   "WikiHouse China - Rooftop 1.0 @ iBOX Chengdu",
@@ -162,11 +163,11 @@ var Projects = []*Project{
 		YouTube: "",
  		Image:   "wikihouseCN.jpg",
 		Text:    "In time for summer, architects and designers are coming together to prototype the first WikiHouse in China. Launching in the rooftop space of the Wikifactory Lab to provide a relaxed environment for makers of Chengdu.<br><br>We will be launching our chapter of WikiHouse China to drive open innovation in architecture for social and environmental impact. With Sichuan being both the bamboo region of China and affected by earthquakes every year, we will explore how to develop earthquake resistant shelters with more sustainable plywood fibres to help rebuild communities.",
- 		Partners:"",
- 		CTO:	 "Want to be notified of our launch?",
+ 		Partners:"CDAD-logo.png",
+ 		CTO:	 "More about WikiHouse",
 	},
 	{
-		Title:   "Wikifactory Innovation Hub @ NIMI Chengdu, China",
+		Title:   "Innovation Hub @ NIMI Chengdu, China",
 		Link:    "",
 		Status:  "Launching Q3 2015",
 		GitHub:  "",
@@ -174,31 +175,10 @@ var Projects = []*Project{
 		YouTube: "",
 		Image:   "nimi.jpg",
 		Text:    "At NIMI we are developing a multi-purpose innovation space, hosting a public facing exhibition in the future of design and production, as well as offering professional training and digital fabrication-as-a-service.<br><br>In training young talent in digital fabrication in a range of technologies from stereolithography to laser cutting, the Innovation Hub will support local businesses and industry to adopt these in their supply chains. A co-working and fully-equipped workshop space will also be open for local maker and hardware communities.",
-		Partners:"",
-		CTO:	 "Want to be a resident maker?",
+		Partners:"NIMI-logo.png",
 	},
 }
 
-var Partners = []*Project{
-	{// Ethical Works
-		Title:    "",
-		Link:     "",
-		Facebook: "",
-		GitHub:   "",
-		Twitter:  "",
-		YouTube:  "",
-		Text:     ``,
-	},
-	{// Nordic International Management Institute Chengdu
-		Title:    "",
-		Link:     "",
-		Facebook: "",
-		GitHub:   "",
-		Twitter:  "",
-		YouTube:  "",
-		Text:     ``,
-	},
-}
 
 func exit(args ...interface{}) {
 	if len(args) == 1 {
@@ -286,6 +266,12 @@ func genSite() {
 		o("<h2>" + p.Title + "</h2>")
 		o("<h5>" + p.Status + "</h5>")
 		o("<div class=text><p>" + p.Text + "</p></div>")
+		if p.Partners != "" {
+			o("<div class='partnersimage'><img class=partnerimg src=/gfx/" + p.Partners + "></div>")
+		}
+		if p.CTO != "" {
+			o("<div class='ctobutton'><h3>" + p.CTO + "</h3></div>")
+		}
 		o("</div>")
 	}
 	for _, project := range Projects {
