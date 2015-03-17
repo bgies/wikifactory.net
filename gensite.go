@@ -262,7 +262,7 @@ func genSite() {
 	// HOW PROJECTS
 	o("<div>")
 	o("<h2>Projects</h2>")
-	o("<div class=device-wrapper><img class=devices src=/gfx/devices3.png></div>")
+	o("<div class=device-wrapper><img class=devices src=/gfx/devices.png></div>")
 	o("</div>")
 	// WHO
 	// FOOTER
