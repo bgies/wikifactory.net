@@ -15,8 +15,9 @@ generate:
 
 - style.css:
     source:
-        - coffee/style.coffee
         - css/bounce.css
+        - css/fonts.css
+        - coffee/style.coffee
 
 css.embed: false
 

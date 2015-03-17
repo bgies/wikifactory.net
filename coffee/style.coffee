@@ -55,10 +55,12 @@ module.exports = (api) ->
             borderBottom: '1px solid #3c3c3c'
 
         h5:
-            fontFamily: 'Montserrat'
-            fontSize: '1.2vw'
+            fontFamily: 'Proxima Nova'
+            fontWeight: 400
+            fontSize: '1.3vw'
             color: '#0274B8'
             textAlign: 'center'
+            marginTop: '-0.5vw'
 
         # 'a::selection':
         #    color: '#fff'
