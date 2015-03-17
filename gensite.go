@@ -62,7 +62,8 @@ type Project struct {
 	Area     string
 	YouTube  string
 	Partners string
-	CTO      string
+	CTA      string
+	Button	 string
 }
 
 var Members = []*Person{
@@ -126,9 +127,10 @@ var Projects = []*Project{
 		GitHub:   "/wikifactory",
 		Twitter:  "wikifactory",
 		YouTube:  "WikifactoryMovement",
-		Text:     ``,
+		Text:     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua et dolore manga aliqua.<br><br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 		Image:    "",
-		CTO:	  "",
+		CTA:	  "Get early access",
+		Button:	  "small-btn",
 	},
 	{
 		Title:   "Wikifactory @iBox Chengdu, China",
@@ -140,7 +142,8 @@ var Projects = []*Project{
 		Image:   "labchengdu.jpg",
 		Text:    "Our China HQ at the heart of Chengdu’s latest creative hub, alongside art galleries, artisan workshops and coworking spaces as well as cafés and restaurants.<br><br>A space to bring together a community around digital fabrication, offering access to 3D printers, desk space and business incubation support to launch new product ideas that have a social impact.",
 		Partners:"WikihouseCN_logo_black.png",
-		CTO:	 "Start a Wikifactory in your city",
+		CTA:	 "Start a Wikifactory in your city",
+		Button:	 "large-btn",
 	},
 	{
 		Title:   "Printing the Future",
@@ -150,9 +153,10 @@ var Projects = []*Project{
 		Twitter: "",
 		YouTube: "",
  		Image:   "printingthefuture.jpg",
-		Text:    "We are collaborating with education experts in China to develop and deliver a learning programme around entrepreneurship, design and 3D printing at 10 universities across 5 provinces in China.<br><br>Over 2,000 students will be introduced and given access to digital fabrication technologies in developing more sustainable, innovative products through seminars and workshops.<br><br>Participating students will be encouraged to form teams and pitch their product ideas to receive mentorship from experienced pioneers in the industry and continue prototyping!",
+		Text:    "We are collaborating with education experts in China to develop and deliver a learning programme around entrepreneurship, design and 3D printing at 10 universities across 5 provinces in China.<br><br>Over 2,000 students will be introduced and given access to digital fabrication technologies in developing more sustainable, innovative products through seminars and workshops.<br><br>Participating students will be encouraged to form teams and pitch their product ideas to receive mentorship from experienced pioneers in the industry and continue prototyping.",
  		Partners:"CYDF-logo.png",
- 		CTO:	 "Partner with us",
+ 		CTA:	 "Partner with us",
+		Button:	 "small-btn",
 	},
 	{
 		Title:   "WikiHouse China - Rooftop 1.0 @ iBOX Chengdu",
@@ -164,7 +168,8 @@ var Projects = []*Project{
  		Image:   "wikihouseCN.jpg",
 		Text:    "In time for summer, architects and designers are coming together to prototype the first WikiHouse in China. Launching in the rooftop space of the Wikifactory Lab to provide a relaxed environment for makers of Chengdu.<br><br>We will be launching our chapter of WikiHouse China to drive open innovation in architecture for social and environmental impact. With Sichuan being both the bamboo region of China and affected by earthquakes every year, we will explore how to develop earthquake resistant shelters with more sustainable plywood fibres to help rebuild communities.",
  		Partners:"CDAD-logo.png",
- 		CTO:	 "More about WikiHouse",
+ 		CTA:	 "More about WikiHouse",
+		Button:	 "medium-btn",
 	},
 	{
 		Title:   "Innovation Hub @ NIMI Chengdu, China",
@@ -269,8 +274,8 @@ func genSite() {
 		if p.Partners != "" {
 			o("<div class='partnersimage'><img class=partnerimg src=/gfx/" + p.Partners + "></div>")
 		}
-		if p.CTO != "" {
-			o("<div class='ctobutton'><h3>" + p.CTO + "</h3></div>")
+		if p.CTA != "" {
+			o("<div class=" + p.Button +"><h3>" + p.CTA + "</h3></div>")
 		}
 		o("</div>")
 	}

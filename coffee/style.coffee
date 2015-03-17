@@ -42,6 +42,15 @@ module.exports = (api) ->
             color: '#6e6e6e'
             textAlign: 'center'
 
+        h3:
+            fontFamily: 'Montserrat'
+            fontWeight: 400
+            fontSize: '1.4vw'
+            color: '#0274B8'
+            textAlign: 'center'
+            paddingLeft: '1vw'
+            paddingRight: '1vw'
+
         h4: #NAV
             fontFamily: 'Montserrat'
             fontSize: '14px'
@@ -211,3 +220,57 @@ module.exports = (api) ->
         '.text':
             width: '70vw'
             margin: '0 auto'
+
+        '.small-btn':
+            border: '0.2vw solid #0274B8'
+            borderRadius: '4px'
+            width: '16vw'
+            height: '3.6vw'
+            margin: '30px auto'
+            lineHeight: '0.4'
+            transition: 'background-color 0.1s ease-in-out'
+            WebkitTransition: 'background-color 0.1s ease-in-out'
+
+        '.small-btn:hover':
+            backgroundColor: '#0274B8'
+            color: '#fff'
+            cursor: 'pointer'
+
+        '.small-btn:hover h3':
+            color: '#fff'
+
+        '.medium-btn':
+            border: '0.2vw solid #0274B8'
+            borderRadius: '4px'
+            width: '20vw'
+            height: '3.6vw'
+            margin: '30px auto'
+            lineHeight: '0.4'
+            transition: 'background-color 0.1s ease-in-out'
+            WebkitTransition: 'background-color 0.1s ease-in-out'
+
+        '.medium-btn:hover':
+            backgroundColor: '#0274B8'
+            color: '#fff'
+            cursor: 'pointer'
+
+        '.medium-btn:hover h3':
+            color: '#fff'
+
+        '.large-btn':
+            border: '0.2vw solid #0274B8'
+            borderRadius: '4px'
+            width: '26vw'
+            height: '3.6vw'
+            margin: '30px auto'
+            lineHeight: '0.4'
+            transition: 'background-color 0.1s ease-in-out'
+            WebkitTransition: 'background-color 0.1s ease-in-out'
+
+        '.large-btn:hover':
+            backgroundColor: '#0274B8'
+            color: '#fff'
+            cursor: 'pointer'
+
+        '.large-btn:hover h3':
+            color: '#fff'
