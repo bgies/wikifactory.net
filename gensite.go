@@ -22,8 +22,8 @@ const (
 	outputDirectory	= "www"
 	tagline			= ""
 	cta				= ""
-	whatOne			= "A global, entrepreneurial network of strategists, technologists, designers, architects and makers."
-	whatTwo 		= "Working towards a more open and empowering model of collaboration for digital fabrication projects."
+	whatOne			= "A global, entrepreneurial network of strategists, technologists, designers, architects and makers." //WIP
+	whatTwo 		= "Working towards a more open and empowering model of collaboration for digital fabrication projects." //WIP
 )
 
 var index []byte
@@ -137,8 +137,8 @@ var Projects = []*Project{
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
-		Text:    "Our China HQ at the heart of Chengdu’s latest creative hub, alongside art galleries, artisan workshops and coworking spaces as well as cafés and restaurants.<br>A space to bring together a community around digital fabrication, offering access to 3D printers, desk space and business incubation support to launch new product ideas that have a social impact.",
-		Image:    "labchengdu.jpg",
+		Image:   "labchengdu.jpg",
+		Text:    "Our China HQ at the heart of Chengdu’s latest creative hub, alongside art galleries, artisan workshops and coworking spaces as well as cafés and restaurants.<br><br>A space to bring together a community around digital fabrication, offering access to 3D printers, desk space and business incubation support to launch new product ideas that have a social impact.",
 		CTO:	 "Want to start a lab?",
 	},
 	{
@@ -148,8 +148,8 @@ var Projects = []*Project{
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
-		Text:    "We are collaborating with education experts in China to develop and deliver a learning programme around entrepreneurship, design and 3D printing at 10 universities across 5 provinces in China.<br>Over 2,000 students will be introduced and given access to digital fabrication technologies in developing more sustainable, innovative products through seminars and workshops.<br>Participating students will be encouraged to form teams and pitch their product ideas to receive mentorship from experienced pioneers in the industry and continue prototyping!",
- 		Image:    "printingthefuture.jpg",
+ 		Image:   "printingthefuture.jpg",
+		Text:    "We are collaborating with education experts in China to develop and deliver a learning programme around entrepreneurship, design and 3D printing at 10 universities across 5 provinces in China.<br><br>Over 2,000 students will be introduced and given access to digital fabrication technologies in developing more sustainable, innovative products through seminars and workshops.<br><br>Participating students will be encouraged to form teams and pitch their product ideas to receive mentorship from experienced pioneers in the industry and continue prototyping!",
  		Partners:"",
  		CTO:	 "Want to partner with us?",
 	},
@@ -160,8 +160,8 @@ var Projects = []*Project{
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
-		Text:    "In time for summer, architects and designers are coming together to prototype the first WikiHouse in China. Launching in the rooftop space of the Wikifactory Lab to provide a relaxed environment for makers of Chengdu.<br>We will be launching our chapter of WikiHouse China to drive open innovation in architecture for social and environmental impact. With Sichuan being both the bamboo region of China and affected by earthquakes every year, we will explore how to develop earthquake resistant shelters with more sustainable plywood fibres to help rebuild communities.",
- 		Image:    "wikihouseCN.jpg",
+ 		Image:   "wikihouseCN.jpg",
+		Text:    "In time for summer, architects and designers are coming together to prototype the first WikiHouse in China. Launching in the rooftop space of the Wikifactory Lab to provide a relaxed environment for makers of Chengdu.<br><br>We will be launching our chapter of WikiHouse China to drive open innovation in architecture for social and environmental impact. With Sichuan being both the bamboo region of China and affected by earthquakes every year, we will explore how to develop earthquake resistant shelters with more sustainable plywood fibres to help rebuild communities.",
  		Partners:"",
  		CTO:	 "Want to be notified of our launch?",
 	},
@@ -172,8 +172,8 @@ var Projects = []*Project{
 		GitHub:  "",
 		Twitter: "",
 		YouTube: "",
-		Text:    "At NIMI we are developing a multi-purpose innovation space, hosting a public facing exhibition in the future of design and production, as well as offering professional training and digital fabrication-as-a-service.<br>In training young talent in digital fabrication in a range of technologies from stereolithography to laser cutting, the Innovation Hub will support local businesses and industry to adopt these in their supply chains. A co-working and fully-equipped workshop space will also be open for local maker and hardware communities.",
 		Image:   "nimi.jpg",
+		Text:    "At NIMI we are developing a multi-purpose innovation space, hosting a public facing exhibition in the future of design and production, as well as offering professional training and digital fabrication-as-a-service.<br><br>In training young talent in digital fabrication in a range of technologies from stereolithography to laser cutting, the Innovation Hub will support local businesses and industry to adopt these in their supply chains. A co-working and fully-equipped workshop space will also be open for local maker and hardware communities.",
 		Partners:"",
 		CTO:	 "Want to be a resident maker?",
 	},
@@ -267,35 +267,33 @@ func genSite() {
 	o("<div class=intro><h1>" + whatOne + "</h1></div>")
 	o("<div class=intro><h1>" + whatTwo + "</h1></div>")
 	o("</div>")
-	// HOW OVERVIEW
+	// HOW
 	o("<div class='nodes tag' id= how>")
 	o("<div class=nodes-text-one><h2>ONLINE<br>SOCIAL DESIGN PLATFORM</h2></div>")
 	o("<div class=nodes-text-two><h2>PHYSICAL<br>COLLABORATION SPACES</h2></div>")
 	o("<div class=nodes-text-three><h2>TRAINING<br>& WORKSHOPS</h2></div>")
 	o("<div class=nodes-text-four><h2>PROJECT<br>INCUBATION</h2></div>")
 	o("</div>")
-	// HOW PROJECTS
+	//// PROJECTS
 	o("<div>")
-	o("<h2>Projects</h2>")
+	o("<h1 class=projects>Projects</h1>")
 	o("<div class=device-wrapper><img class=devices src=/gfx/devices.png></div>")
-
 	renderProject := func(p *Project, next *Project) {
-		o("<div><img src=/gfx/" + p.Image + "></div>")
+		if p.Image != "" {
+			o("<div class='projectimage'><img class=projectimg src=/gfx/" + p.Image + "></div>")
+		}
 		o("<div>")
 		o("<h2>" + p.Title + "</h2>")
 		o("<h5>" + p.Status + "</h5>")
-		o("<p>" + p.Text + "</p>")
+		o("<div class=text><p>" + p.Text + "</p></div>")
 		o("</div>")
 	}
-
 	for _, project := range Projects {
 		renderProject(project, nil)
 	}
-
-
-
 	o("</div>")
 	// WHO
+	// add renter team function
 	// FOOTER
 	// WRITE TO BUF
 	index = buf.Bytes()

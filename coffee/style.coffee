@@ -62,6 +62,14 @@ module.exports = (api) ->
             textAlign: 'center'
             marginTop: '-0.5vw'
 
+        p:
+            fontFamily: 'Proxima Nova'
+            fontWeight: 400
+            fontSize: '1.5vw'
+            color: '#6e6e6e'
+            lineHeight: '1.8'
+            textAlign: 'center'
+
         # 'a::selection':
         #    color: '#fff'
 
@@ -144,6 +152,7 @@ module.exports = (api) ->
             paddingTop: '10px'
             paddingBottom: '10px'
 
+        # HOW
         '.nodes':
             width: '100vw'
             height: '30vw'
@@ -176,7 +185,20 @@ module.exports = (api) ->
             top: '18vw'
             right: '20vw'
 
-        # HOW
+        # PROJECTS
+        '.projects':
+            color: '#3c3c3c'
+            marginTop: '50px'
+            marginBottom: '-10px'
+
+        '.projectimage':
+            width: '100vw'
+            height: 'auto'
+
+        '.projectimg':
+            width: '100%'
+            height: 'auto'
+
         '.device-wrapper':
             width: '80vw'
             margin: '0 auto'
@@ -185,3 +207,7 @@ module.exports = (api) ->
         '.devices':
             width: '100%'
             height: 'auto'
+
+        '.text':
+            width: '70vw'
+            margin: '0 auto'
