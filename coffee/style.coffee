@@ -29,7 +29,7 @@ module.exports = (api) ->
         h1:
             fontFamily: 'Montserrat'
             fontWeight: 400
-            fontSize: '2.4vw'
+            fontSize: '2.2vw'
             lineHeight: '1.6'
             color: '#3c3c3c'
             letterSpacing: ''
@@ -85,38 +85,6 @@ module.exports = (api) ->
             cursor: 'pointer'
             opacity: 0.9
 
-        # PARTICLES AND TAGLINE
-        canvas:
-            display: 'block'
-            verticalAlign: 'bottom'
-
-        '#particles-js':
-            backgroundColor: '#0274B8' # Wikifactory Blue.
-            color: '#ffffff'
-            height: '98vh'
-
-        '#particles-js div':
-            width: '780px'
-            margin: '0 auto'
-
-        '#particles-js img':
-            pointerEvents: 'none'
-            position: 'absolute'
-            top: '30vh'
-
-        '.arrow':
-            bottom: '20px'
-            width: '50px'
-            height: '50px'
-            marginLeft: 'calc(50% - 25px)'
-            position: 'absolute'
-
-        #MAIN WRAPPER
-        section:
-            paddingTop: '20px'
-            width: '85vw'
-            margin: '0 auto'
-
         'nav ul':
             listStyle: 'none'
             float: 'right'
@@ -134,50 +102,78 @@ module.exports = (api) ->
             borderBottom: '1px solid #0274B8'
             cursor: 'pointer'
 
+        # PARTICLES
+        canvas:
+            display: 'block'
+            verticalAlign: 'bottom'
+
+        '#particles-js':
+            backgroundColor: '#0274B8' # Wikifactory Blue.
+            color: '#ffffff'
+            height: '98vh'
+            marginBottom: '30px'
+
+        '#particles-js div':
+            width: '780px'
+            margin: '0 auto'
+
+        '#particles-js img':
+            pointerEvents: 'none'
+            position: 'absolute'
+            top: '30vh'
+
+        '.arrow':
+            bottom: '20px'
+            width: '50px'
+            height: '50px'
+            marginLeft: 'calc(50% - 25px)'
+            position: 'absolute'
+
         # WHAT
-        '.intro h1':
-            marginTop: '50px'
+        '.intro':
+            width: '80vw'
+            margin: '0 auto'
+            paddingTop: '10px'
+            paddingBottom: '10px'
 
         '.nodes':
             width: '100vw'
-            position: 'absolute'
-            left: 0
-            marginTop: '40px'
+            height: '30vw'
+            marginTop: '30px'
             marginBottom: '40px'
-
-        '.nodes img':
-            width: '100%'
-            height: 'auto'
-
-        '.nodes-text':
-            position: 'absolute'
-            top: '3vw'
-            width: '100vw'
-            height: 'auto'
+            backgroundImage: 'url("/gfx/nodes.png")'
+            position: 'relative'
 
         'div.nodes-text-one':
             width: '30%'
             position: 'absolute'
-            top: '3vw'
-            left: '9vw'
+            top: '5vw'
+            left: '10vw'
 
         'div.nodes-text-two':
             width: '30%'
             position: 'absolute'
-            top: '3vw'
-            right: '9vw'
+            top: '5vw'
+            right: '10vw'
 
         'div.nodes-text-three':
             width: '30%'
             position: 'absolute'
-            top: '16vw'
-            left: '18vw'
+            top: '18vw'
+            left: '20vw'
 
         'div.nodes-text-four':
             width: '30%'
             position: 'absolute'
-            top: '16vw'
-            right: '18vw'
+            top: '18vw'
+            right: '20vw'
 
-        footer:
-            width: '500px'
+        # HOW
+        '.device-wrapper':
+            width: '80vw'
+            margin: '0 auto'
+            height: 'auto'
+
+        '.devices':
+            width: '100%'
+            height: 'auto'

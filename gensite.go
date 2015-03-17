@@ -119,9 +119,9 @@ var Projects = []*Project{
 	{
 		Title:    "Wikifactory Social Design Platform",
 		Link:     "https://www.wikifactory.org/",
-		Status:   "In development",
+		Status:   "Beta launching Q2 2015",
 		Facebook: "wikifactory",
-		GitHub:   "tav/wikifactory",
+		GitHub:   "/wikifactory",
 		Twitter:  "wikifactory",
 		YouTube:  "WikifactoryMovement",
 		Text:     ``,
@@ -248,21 +248,22 @@ func genSite() {
 	o("<script src=" + getPath("site.js") + " async></script>")
 	o("<script src=http://vincentgarreau.com/particles.js/particles.js></script>")
 	// WHAT
-	o("<section>")
 	o("<div class=tag id=what>")
 	o("<div class=intro><h1>" + whatOne + "</h1></div>")
 	o("<div class=intro><h1>" + whatTwo + "</h1></div>")
 	o("</div>")
-	// HOW
-	o("<div class=nodes>")
-	o("<img class=tag id=how src=/gfx/nodes.png>")
-	o("<div class=nodes-text>")
+	// HOW OVERVIEW
+	o("<div class='nodes tag' id= how>")
 	o("<div class=nodes-text-one><h2>ONLINE<br>SOCIAL DESIGN PLATFORM</h2></div>")
 	o("<div class=nodes-text-two><h2>PHYSICAL<br>COLLABORATION SPACES</h2></div>")
 	o("<div class=nodes-text-three><h2>TRAINING<br>& WORKSHOPS</h2></div>")
 	o("<div class=nodes-text-four><h2>PROJECT<br>INCUBATION</h2></div>")
-	o("</div></div>")
-	o("</section")
+	o("</div>")
+	// HOW PROJECTS
+	o("<div>")
+	o("<h2>Projects</h2>")
+	o("<div class=device-wrapper><img class=devices src=/gfx/devices3.png></div>")
+	o("</div>")
 	// WHO
 	// FOOTER
 	// WRITE TO BUF
