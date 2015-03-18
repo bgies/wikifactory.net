@@ -127,7 +127,7 @@ var Projects = []*Project{
 		GitHub:   "/wikifactory",
 		Twitter:  "wikifactory",
 		YouTube:  "WikifactoryMovement",
-		Text:     "On wikifactory.org we are developing a social collaboration platform, designed for open design and hardware projects. Think \"github for design and hardware\" meets \"wikipedia of things\".<br><br>Features are both inspired by successful methodologies of open source software development, as well as contextualised to the processes of designing and producing physical objects.<br><br>We are starting with a community platform that deals with profiling of individuals and projects, hosting of design files and instructions as well as various discovery tools like aggregators and collections. Next steps can range from browser-based design and customisation tools to version control and componetisation, depending on the communities needs.",
+		Text:     "On wikifactory.org we are developing a social collaboration platform for open design and hardware projects. Think \"github for design and hardware\" meets \"wikipedia of things\".<br><br>Features are both inspired by successful methodologies of open source software development, as well as contextualised to the processes of designing and producing physical objects.<br><br>We are starting with a community platform that deals with profiling of individuals and projects, hosting of design files and instructions as well as various discovery tools like aggregators and collections. Next steps can range from browser-based design and customisation tools to version control and componetisation, depending on the communities needs.",
 		Image:    "",
 		CTA:	  "Get early access",
 		Button:	  "small-btn",
