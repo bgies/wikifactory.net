@@ -45,6 +45,7 @@ type Person struct {
 	GitHub   string
 	LinkedIn string
 	Twitter  string
+	Skype    string
 	Text     string
 	Image    string
 }
@@ -70,21 +71,21 @@ var Members = []*Person{
 	{
 		ID:       "tom",
 		Name:     "Tom Salfield",
-		Role:	  "Chief Technical Architect",
+		Role:	  "Systems Developer and Economics",
 		GitHub:   "salfield",
 		LinkedIn: "pub/tom-salfield/19/893/258",
 		Twitter:  "tsalfield",
 		Text:     `Technical architect and software developer that is passionate about employing P2P and open source technologies to solve systemic problems and bring about a more open, sustainable economy.`,
-		Image:    "",
+		Image:    "tom.jpg",
 	},
 	{
 		ID:       "christina",
 		Name:     "Christina Rebel",
-		Role:	  "Business and User Experience",
+		Role:	  "Innovation Strategy & Business Development ",
 		LinkedIn: "in/christinarebel",
 		Twitter:  "christina_rebel",
 		Text:     `Constantly building on her range of skillsets - from web development to illustration, strategic planning to video production, and more - to see social innovation projects through early stages and beyond.`,
-		Image:    "",
+		Image:    "christina.jpg",
 	},
 	{
 		ID:       "max",
@@ -94,28 +95,53 @@ var Members = []*Person{
 		LinkedIn: "in/maximiliankampik",
 		Twitter:  "mkampik",
 		Text:     `Technologist and aspiring futurist that enjoys keeping up with the latest tech innovations and implementations. Has a background in politics and international relations.`,
-		Image:    "",
+		Image:    "max.jpg",
 	},
 	{
 		ID:       "tav",
 		Name:     "tav",
-		Role:	  "Systems and Innovation",
+		Role:	  "Systems Designer & Innovation Strategy",
 		Link:     "http://tav.espians.com/",
 		GitHub:   "tav",
 		LinkedIn: "in/asktav",
 		Twitter:  "tav",
 		Text:     `Systems designer, entrepreneur and aspiring polymath. Spends his time innovating on the cutting edge of social, economic and<br> technological systems.`,
-		Image:    "",
+		Image:    "tav.jpg",
 	},
 	{
 		ID:       "nicolai",
 		Name:     "Nicolai Peitersen",
-		Role:	  "Business and User Experience",
+		Role:	  "Business Development & Partnerships",
 		LinkedIn: "pub/nicolai-peitersen/0/904/852",
 		Twitter:  "NPeitersen",
 		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
-		Image:    "",
+		Image:    "nicolai.jpg",
 	},
+	/*{
+		ID:       "jimmy",
+		Name:     "Jimmy Yeh",
+		Role:	  "Architecture & Design",
+		LinkedIn: "pub/nicolai-peitersen/0/904/852",
+		Twitter:  "NPeitersen",
+		Text:     `A Cornell trained architect with a passion in driving sustainable practices in the industry. `,
+		Image:    "jimmy.jpg",
+	},
+	{
+		ID:       "steven",
+		Name:     "Steven Lau",
+		Role:	  "Business and User Experience",
+		LinkedIn: "pub/nicolai-peitersen/0/904/852",
+		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
+		Image:    "jimmy.jpg",
+	},
+	{
+		ID:       "isabel",
+		Name:     "Isabel Yeh",
+		Role:	  "Business and User Experience",
+		LinkedIn: "pub/nicolai-peitersen/0/904/852",
+		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
+		Image:    "isabel.jpg",
+	},*/
 }
 
 var Projects = []*Project{
@@ -285,33 +311,33 @@ func genSite() {
 	}
 	o("</div>")
 	// WHO
-	// renderPerson := func(p *Person) {
-	// 	o("<div>")
-	// 	if p.Image != "" {
-	// 		o("<div><img src=/gfx/team/" + p.Image + "></div>")
-	// 	}
-	// 	o("<h3>" + p.Name + "</h3>")
-	// 	o("<p>" + p.Text + "</p>")
-	// 	o("</div>")
-	// 	o("<div class=person-smedia>")
-	// 	// if p.Twitter != "" {
-	// 	// 	o("<div class=icon-person>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=gfx/icons/twitter.png>" + "</a>" + "</div>")
-	// 	// }
-	// 	// if p.LinkedIn != "" {
-	// 	// 	o("<div class=icon-person>" + "<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img src=gfx/icons/linkedin.png>" + "</a>" + "</div>")
-	// 	// }
-	// 	// if p.Skype != "" {
-	// 	// 	o("<div class=icon-person>" + "<a target=_blank href=" + p.Skype + ">" + "<img src=gfx/icons/skype.png>" + "</a>" + "</div>")
-	// 	// }
-	// 	// if p.GitHub != "" {
-	// 	// 	o("<div class=icon-person>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=gfx/icons/github.png>" + "</a>" + "</div>")
-	// 	// }
-	// 	o("</div>")
-	// 	o("</div>")
-	// }
-	// for _, members := range Members {
-	// 	renderPerson(members)
-	// }
+	renderPerson := func(p *Person) {
+	 	o("<div>")
+	 	if p.Image != "" {
+	 		o("<div><img src=/gfx/team/" + p.Image + "></div>")
+	 	}
+	 	o("<h3>" + p.Name + "</h3>")
+	 	o("<p>" + p.Text + "</p>")
+	 	o("</div>")
+	 	o("<div class=person-smedia>")
+	 	 if p.Twitter != "" {
+	 	 	o("<div class=icon-person>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=gfx/icons/twitter.png>" + "</a>" + "</div>")
+	 	 }
+	 	 if p.LinkedIn != "" {
+	 	 	o("<div class=icon-person>" + "<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img src=gfx/icons/linkedin.png>" + "</a>" + "</div>")
+	 	 }
+	 	 if p.Skype != "" {
+	 	 	o("<div class=icon-person>" + "<a target=_blank href=" + p.Skype + ">" + "<img src=gfx/icons/skype.png>" + "</a>" + "</div>")
+	 	 }
+	 	 if p.GitHub != "" {
+	 	 	o("<div class=icon-person>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=gfx/icons/github.png>" + "</a>" + "</div>")
+	 	 }
+	 	o("</div>")
+	 	o("</div>")
+	 }
+	for _, members := range Members {
+		renderPerson(members)
+	}
 	// add renter team function
 	// FOOTER
 	// WRITE TO BUF
