@@ -203,6 +203,8 @@ module.exports = (api) ->
         '.projectimage':
             width: '100vw'
             height: 'auto'
+            marginTop: '60px'
+            marginBottom: '30px'
 
         '.projectimg':
             width: '100%'
@@ -274,3 +276,13 @@ module.exports = (api) ->
 
         '.large-btn:hover h3':
             color: '#fff'
+
+        '.partnersimage':
+            width: '20vw'
+            heihgt: 'auto'
+            margin: '0 auto'
+            marginTop: '-20px'
+
+        '.partnerimg':
+            width: '100%'
+            height: 'auto'
