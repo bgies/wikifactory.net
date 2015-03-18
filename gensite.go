@@ -140,7 +140,7 @@ var Projects = []*Project{
 		Twitter: "",
 		YouTube: "",
 		Image:   "labchengdu.jpg",
-		Text:    "The China HQ and first of our replicatable Wikifactories, at the heart of Chengdu’s latest creative hub, alongside art galleries, artisan workshops and coworking spaces as well as cafés and restaurants.<br><br>It houses a diverse community of technologists, designers and makers and provides access to a growing range of digital fabrication technologies, desk space and business incubation support to help launch new products. In Chengdu, there is a focus on products that have a social impact.<br><br>Wikifactories like this one will soon be connected to each other via our Social Design Platform. Creating a global, distributed collaboration and production network of 21st century Factories.",
+		Text:    "The China HQ and first of our replicatable Wikifactories, at the heart of Chengdu’s latest creative hub, alongside art galleries, artisan workshops and coworking spaces as well as cafés and restaurants.<br><br>It houses a diverse community of technologists, designers and makers and provides access to a growing range of digital fabrication technologies, desk space and business incubation support to help launch new products. In Chengdu, there is a focus on products that have a social impact.<br><br>Wikifactories like this one can soon be connected to each other via our Social Design Platform. Creating a global, distributed collaboration and production network of 21st century Factories.",
 		Partners:"",
 		CTA:	 "Start a Wikifactory in your city",
 		Button:	 "large-btn",
