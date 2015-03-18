@@ -281,8 +281,8 @@ module.exports = (api) ->
             width: '20vw'
             heihgt: 'auto'
             margin: '0 auto'
-            marginTop: '-20px'
 
         '.partnerimg':
             width: '100%'
             height: 'auto'
+            marginTop: '-40px'
