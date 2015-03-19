@@ -286,3 +286,4 @@ module.exports = (api) ->
             width: '100%'
             height: 'auto'
             marginTop: '-40px'
+            marginBottom: '-30px'
