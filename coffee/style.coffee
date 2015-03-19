@@ -289,6 +289,7 @@ module.exports = (api) ->
             backgroundColor: '#01446c'
             position: 'relative'
             marginTop: '30px'
+            clear: 'both'
 
         '.network-nodes':
             width: '100vw'
@@ -300,7 +301,7 @@ module.exports = (api) ->
 
         '.network-nodes h2':
             color: '#fff'
-            marginTop: '30px'
+            marginTop: '50px'
             marginBottom: '20px'
 
         '.city':
@@ -378,6 +379,8 @@ module.exports = (api) ->
             height: 'auto'
             marginLeft: '10vw'
             marginRight: '10vw'
+            marginBottom: '40px'
+            display: 'inline-block'
 
         '.person-card':
             marginTop: '20px'

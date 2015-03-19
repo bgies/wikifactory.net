@@ -387,36 +387,6 @@ func genSite() {
 		renderProject(project, nil)
 	}
 	o("</div>")
-	// WHO
-<<<<<<< Updated upstream
-	// renderPerson := func(p *Person) {
-	//  	o("<div>")
-	//  	if p.Image != "" {
-	//  		o("<div><img src=/gfx/team/" + p.Image + "></div>")
-	//  	}
-	//  	o("<h3>" + p.Name + "</h3>")
-	//  	o("<p>" + p.Text + "</p>")
-	//  	o("</div>")
-	//  	o("<div class=person-smedia>")
-	//  	 if p.Twitter != "" {
-	//  	 	o("<div class=icon-person>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=gfx/icons/twitter.png>" + "</a>" + "</div>")
-	//  	 }
-	//  	 if p.LinkedIn != "" {
-	//  	 	o("<div class=icon-person>" + "<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img src=gfx/icons/linkedin.png>" + "</a>" + "</div>")
-	//  	 }
-	//  	 if p.Skype != "" {
-	//  	 	o("<div class=icon-person>" + "<a target=_blank href=" + p.Skype + ">" + "<img src=gfx/icons/skype.png>" + "</a>" + "</div>")
-	//  	 }
-	//  	 if p.GitHub != "" {
-	//  	 	o("<div class=icon-person>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=gfx/icons/github.png>" + "</a>" + "</div>")
-	//  	 }
-	//  	o("</div>")
-	//  	o("</div>")
-	//  }
-	// for _, members := range Members {
-	// 	renderPerson(members)
-	// }
-=======
 	o("<div id=who>")
 	o("<div class='team-wrapper'>")
 	o("<h1 class=projects>Team</h1>")
@@ -453,7 +423,6 @@ func genSite() {
 	o("</div>")
 	o("</div>")
 	// add renter team function
->>>>>>> Stashed changes
 	// FOOTER
 	o("<div class=footer>")
 	//// NETWORK NODES
