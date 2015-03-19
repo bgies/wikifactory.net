@@ -22,8 +22,8 @@ const (
 	outputDirectory	= "www"
 	tagline			= ""
 	cta				= ""
-	whatOne			= "A global, entrepreneurial network of strategists, technologists, designers, architects and makers." //WIP
-	whatTwo 		= "Working towards a more open and empowering model of collaboration for digital fabrication projects." //WIP
+	whatOne			= "We are an open innovation network of technologists, designers, architects and makers." //WIP
+	whatTwo 		= "At the nodes, we are working on the means to enable open and distributed collaboration on digital fabrication projects." //WIP
 )
 
 var index []byte
