@@ -65,6 +65,7 @@ type Project struct {
 	Partners string
 	CTA      string
 	Button	 string
+	Divider  string
 }
 
 type Node struct {
@@ -216,6 +217,7 @@ var Projects = []*Project{
 		Image:    "",
 		CTA:	  "Get early access",
 		Button:	  "small-btn",
+		Divider:  "nodes-spacer-1.png",
 	},
 	{
 		Title:   "Wikifactory @ iBox Chengdu, China",
@@ -229,6 +231,7 @@ var Projects = []*Project{
 		Partners:"",
 		CTA:	 "Start a Wikifactory in your city",
 		Button:	 "large-btn",
+		Divider:  "nodes-spacer-2.png",
 	},
 	{
 		Title:   "Printing the Future",
@@ -242,6 +245,7 @@ var Projects = []*Project{
  		Partners:"cydf.png",
  		CTA:	 "Partner with us",
 		Button:	 "small-btn",
+		Divider:  "nodes-spacer-3.png",
 	},
 	{
 		Title:   "WikiHouse China - Rooftop 1.0 @ iBOX Chengdu",
@@ -255,6 +259,7 @@ var Projects = []*Project{
  		Partners:"cdad.png",
  		CTA:	 "More about WikiHouse",
 		Button:	 "medium-btn",
+		Divider:  "nodes-spacer-4.png",
 	},
 	{
 		Title:   "Innovation Hub @ NIMI Chengdu, China",
@@ -266,6 +271,7 @@ var Projects = []*Project{
 		Image:   "nimi.jpg",
 		Text:    "At NIMI we are developing a multi-purpose innovation space, hosting a public facing exhibition in the future of design and production, as well as offering professional training and digital fabrication-as-a-service.<br><br>In training young talent in digital fabrication in a range of technologies from stereolithography to laser cutting, the Innovation Hub will support local businesses and industry to adopt these in their supply chains. A co-working and fully-equipped workshop space will also be open for local maker and hardware communities.",
 		Partners:"nimi.png",
+		Divider:  "nodes-spacer-5.png",
 	},
 }
 
@@ -374,14 +380,18 @@ func genSite() {
 		o("<h2>" + p.Title + "</h2>")
 		o("<h5>" + p.Status + "</h5>")
 		o("<div class=text><p>" + p.Text + "</p></div>")
+		if p.CTA != "" {
+			o("<div class=" + p.Button +"><h3>" + p.CTA + "</h3></div>")
+		}
 		if p.Partners != "" {
 			o("<p>Partners</p>")
 			o("<div class='partnersimage'><img class=partnerimg src=/gfx/partners/" + p.Partners + "></div>")
 		}
-		if p.CTA != "" {
-			o("<div class=" + p.Button +"><h3>" + p.CTA + "</h3></div>")
+		if p.Divider != "" {
+			o("<div class='nodes-spacer'><img src=/gfx/" + p.Divider + "></div>")
 		}
 		o("</div>")
+
 	}
 	for _, project := range Projects {
 		renderProject(project, nil)
