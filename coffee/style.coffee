@@ -293,16 +293,16 @@ module.exports = (api) ->
 
         '.network-nodes':
             width: '100vw'
-            height: '30vw'
+            height: '27vw'
             position: 'absolute'
             top: 0
             left: 0
-            backgroundColor: '#0274B8'
+            backgroundImage: 'url("/gfx/nodes-footer.png")'
 
         '.network-nodes h2':
             color: '#fff'
             marginTop: '50px'
-            marginBottom: '20px'
+            marginBottom: '10px'
 
         '.city':
             width: '33.33333%'
@@ -352,7 +352,7 @@ module.exports = (api) ->
             width: '14vw'
             height: '3.6vw'
             position: 'absolute'
-            bottom: '4vw'
+            bottom: '3vw'
             left: 'calc(50% - 7vw)'
             lineHeight: '0.4'
             transition: 'background-color 0.1s ease-in-out'

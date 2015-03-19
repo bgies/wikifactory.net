@@ -164,21 +164,7 @@ var Members = []*Person{
 		Name:     "Jason Tang",
 		Role:	  "Partnerships & Operations",
 		LinkedIn: "cn.linkedin.com/pub/博阳-刘/95/37b/715/zh-cn",
-		Image:    "jimmy.jpg",
-	},
-	{
-		ID:       "kit",
-		Name:     "Kit Harford",
-		Role:	  "Education",
-		LinkedIn: "cn.linkedin.com/pub/博阳-刘/95/37b/715/zh-cn",
-		Image:    "kit.jpg",
-	},
-	{
-		ID:       "steven",
-		Name:     "Steven Lau",
-		Role:	  "Research & Business Support",
-		LinkedIn: "cn.linkedin.com/pub/博阳-刘/95/37b/715/zh-cn",
-		Image:    "steven.jpg",
+		Image:    "jason.jpg",
 	},
 	{
 		ID:       "isabel",
@@ -188,11 +174,25 @@ var Members = []*Person{
 		Image:    "isabel.jpg",
 	},
 	{
+		ID:       "steven",
+		Name:     "Steven Lau",
+		Role:	  "Research & Business Support",
+		LinkedIn: "cn.linkedin.com/pub/博阳-刘/95/37b/715/zh-cn",
+		Image:    "steven.jpg",
+	},
+	{
 		ID:       "lychee",
 		Name:     "Lychee Li",
 		Role:	  "PR & Events",
 	LinkedIn: "cn.linkedin.com/pub/博阳-刘/95/37b/715/zh-cn",
 		Image:    "lychee.jpg",
+	},
+	{
+		ID:       "kit",
+		Name:     "Kit Harford",
+		Role:	  "Education",
+		LinkedIn: "cn.linkedin.com/pub/博阳-刘/95/37b/715/zh-cn",
+		Image:    "kit.jpg",
 	},
 	{
 		ID:       "katherine",
