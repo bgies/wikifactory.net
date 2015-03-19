@@ -77,77 +77,130 @@ var Members = []*Person{
 	{
 		ID:       "tom",
 		Name:     "Tom Salfield",
-		Role:	  "Systems Developer and Economics",
+		Role:	  "Systems Developer & Strategy",
 		GitHub:   "salfield",
 		LinkedIn: "pub/tom-salfield/19/893/258",
 		Twitter:  "tsalfield",
-		Text:     `Technical architect and software developer that is passionate about employing P2P and open source technologies to solve systemic problems and bring about a more open, sustainable economy.`,
+		// Text:     `Technical architect and software developer that is passionate about employing P2P and open source technologies to solve systemic problems and bring about a more open, sustainable economy.`,
 		Image:    "tom.jpg",
 	},
 	{
 		ID:       "christina",
 		Name:     "Christina Rebel",
-		Role:	  "Innovation Strategy & Business Development ",
+		Role:	  "Strategy & Business Development",
+		GitHub:   "christinarebel",
 		LinkedIn: "in/christinarebel",
 		Twitter:  "christina_rebel",
-		Text:     `Constantly building on her range of skillsets - from web development to illustration, strategic planning to video production, and more - to see social innovation projects through early stages and beyond.`,
+		// Text:     `Constantly building on her range of skillsets - from web development to illustration, strategic planning to video production, and more - to see social innovation projects through early stages and beyond.`,
 		Image:    "christina.jpg",
 	},
 	{
 		ID:       "max",
 		Name:     "Maximilian Kampik",
-		Role:	  "Technology and User Experience",
+		Role:	  "Technology & User Experience",
 		GitHub:   "mkampik",
 		LinkedIn: "in/maximiliankampik",
 		Twitter:  "mkampik",
-		Text:     `Technologist and aspiring futurist that enjoys keeping up with the latest tech innovations and implementations. Has a background in politics and international relations.`,
+//		Text:     `Technologist and aspiring futurist that enjoys keeping up with the latest tech innovations and implementations. Has a background in politics and international relations.`,
 		Image:    "max.jpg",
 	},
 	{
 		ID:       "tav",
 		Name:     "tav",
-		Role:	  "Systems Designer & Innovation Strategy",
+		Role:	  "Systems Designer & Innovation",
 		Link:     "http://tav.espians.com/",
 		GitHub:   "tav",
 		LinkedIn: "in/asktav",
 		Twitter:  "tav",
-		Text:     `Systems designer, entrepreneur and aspiring polymath. Spends his time innovating on the cutting edge of social, economic and<br> technological systems.`,
+//		Text:     `Systems designer, entrepreneur and aspiring polymath. Spends his time innovating on the cutting edge of social, economic and<br> technological systems.`,
 		Image:    "tav.jpg",
+	},
+	{
+		ID:       "jonathan",
+		Name:     "Jonathan Robinson",
+		Role:	  "Social Innovation & Strategy",
+		LinkedIn: "in/jonathanrobinson1",
+		Twitter:  "jon_ath_an",
+//		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
+		Image:    "jonathan.jpg",
+	},
+	{
+		ID:       "ted",
+		Name:     "Ted Maxwell",
+		Role:	  "Planning & Operations",
+		LinkedIn: "in/theonlyted",
+		Twitter:  "theonlyted",
+//		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
+		Image:    "ted.jpg",
+	},
+	{
+		ID:       "katy",
+		Name:     "Katy Marks",
+		Role:	  "Architecture & Design",
+		LinkedIn: "pub/katy-marks/55/100/22",
+//		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
+		Image:    "katy.jpg",
 	},
 	{
 		ID:       "nicolai",
 		Name:     "Nicolai Peitersen",
-		Role:	  "Business Development & Partnerships",
+		Role:	  "Business Development & Expansion",
 		LinkedIn: "pub/nicolai-peitersen/0/904/852",
 		Twitter:  "NPeitersen",
-		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
+//		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
 		Image:    "nicolai.jpg",
 	},
-	/*{
+	{
 		ID:       "jimmy",
 		Name:     "Jimmy Yeh",
 		Role:	  "Architecture & Design",
-		LinkedIn: "pub/nicolai-peitersen/0/904/852",
+		LinkedIn: "cn.linkedin.com/pub/jimmy-yeh/12/215/276/en",
 		Twitter:  "NPeitersen",
-		Text:     `A Cornell trained architect with a passion in driving sustainable practices in the industry. `,
+		// Text:     `A Cornell trained architect with a passion in driving sustainable practices in the industry. `,
 		Image:    "jimmy.jpg",
+	},
+	{
+		ID:       "jason",
+		Name:     "Jason Tang",
+		Role:	  "Partnerships & Operations",
+		LinkedIn: "cn.linkedin.com/pub/博阳-刘/95/37b/715/zh-cn",
+		Image:    "jimmy.jpg",
+	},
+	{
+		ID:       "kit",
+		Name:     "Kit Harford",
+		Role:	  "Education",
+		LinkedIn: "cn.linkedin.com/pub/博阳-刘/95/37b/715/zh-cn",
+		Image:    "kit.jpg",
 	},
 	{
 		ID:       "steven",
 		Name:     "Steven Lau",
-		Role:	  "Business and User Experience",
-		LinkedIn: "pub/nicolai-peitersen/0/904/852",
-		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
-		Image:    "jimmy.jpg",
+		Role:	  "Research & Business Support",
+		LinkedIn: "cn.linkedin.com/pub/博阳-刘/95/37b/715/zh-cn",
+		Image:    "steven.jpg",
 	},
 	{
 		ID:       "isabel",
 		Name:     "Isabel Yeh",
-		Role:	  "Business and User Experience",
-		LinkedIn: "pub/nicolai-peitersen/0/904/852",
-		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
+		Role:	  "Communications & Community",
+		LinkedIn: "cn.linkedin.com/pub/博阳-刘/95/37b/715/zh-cn",
 		Image:    "isabel.jpg",
-	},*/
+	},
+	{
+		ID:       "lychee",
+		Name:     "Lychee Li",
+		Role:	  "PR & Events",
+	LinkedIn: "cn.linkedin.com/pub/博阳-刘/95/37b/715/zh-cn",
+		Image:    "lychee.jpg",
+	},
+	{
+		ID:       "katherine",
+		Name:     "Katherine Wang",
+		Role:	  "Office & Admin",
+	LinkedIn: "cn.linkedin.com/pub/博阳-刘/95/37b/715/zh-cn",
+		Image:    "katherine.jpg",
+	},
 }
 
 var Projects = []*Project{
@@ -172,7 +225,7 @@ var Projects = []*Project{
 		Twitter: "",
 		YouTube: "",
 		Image:   "labchengdu.jpg",
-		Text:    "The China HQ and first of our replicatable Wikifactories, at the heart of Chengdu’s latest creative hub, alongside art galleries, artisan workshops and coworking spaces as well as cafés and restaurants.<br><br>It houses a diverse community of technologists, designers and makers and provides access to a growing range of digital fabrication technologies, desk space and business incubation support to help launch new products. In Chengdu, there is a focus on products that have a social impact.<br><br>A Wikifactory like this one can soon be connected to other Wikifactories via our Social Design Platform. Creating a global, distributed collaboration and production network of 21st century Factories.",
+		Text:    "The first of our replicatable Wikifactories at the heart of Chengdu’s latest creative hub, alongside art galleries, artisan workshops and coworking spaces as well as cafés and restaurants.<br><br>It houses a diverse community of technologists, designers and makers and provides access to a growing range of digital fabrication technologies, desk space and business incubation support to help launch new products. In Chengdu, there is a focus on products that have a social impact.<br><br>A Wikifactory like this one can soon be connected to other Wikifactories via our Social Design Platform. Creating a global, distributed collaboration and production network of 21st Century factories.",
 		Partners:"",
 		CTA:	 "Start a Wikifactory in your city",
 		Button:	 "large-btn",
@@ -335,6 +388,7 @@ func genSite() {
 	}
 	o("</div>")
 	// WHO
+<<<<<<< Updated upstream
 	// renderPerson := func(p *Person) {
 	//  	o("<div>")
 	//  	if p.Image != "" {
@@ -362,6 +416,44 @@ func genSite() {
 	// for _, members := range Members {
 	// 	renderPerson(members)
 	// }
+=======
+	o("<div id=who>")
+	o("<div class='team-wrapper'>")
+	o("<h1 class=projects>Team</h1>")
+	renderPerson := func(p *Person) {
+		o("<div class=person-card>")
+	 	o("<div>")
+	 	if p.Image != "" {
+	 		o("<div class=person-img><img class=avatar src=/gfx/team/" + p.Image + "></div>")
+	 	}
+	 	o("<h2>" + p.Name + "</h2>")
+	 	o("<h5>" + p.Role + "</h5>")
+	 	o("<p>" + p.Text + "</p>")
+	 	o("</div>")
+	 	o("<div class=person-smedia>")
+	 	 if p.Twitter != "" {
+	 	 	o("<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img class=icon-person src=gfx/icons/twitter.png>" + "</a>")
+	 	 }
+	 	 if p.LinkedIn != "" {
+	 	 	o("<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img class=icon-person src=gfx/icons/linkedin.png>" + "</a>")
+	 	 }
+	 	 if p.Skype != "" {
+	 	 	o("<a target=_blank href=" + p.Skype + ">" + "<img class=icon-person src=gfx/icons/skype.png>" + "</a>")
+	 	 }
+	 	 if p.GitHub != "" {
+	 	 	o("<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img class=icon-person src=gfx/icons/github.png>" + "</a>")
+	 	 }
+	 	o("</div>")
+	 	o("</div>")
+	 }
+	for _, members := range Members {
+
+		renderPerson(members)
+	}
+	o("</div>")
+	o("</div>")
+	// add renter team function
+>>>>>>> Stashed changes
 	// FOOTER
 	o("<div class=footer>")
 	//// NETWORK NODES

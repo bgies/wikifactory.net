@@ -191,8 +191,8 @@ module.exports = (api) ->
         # PROJECTS
         '.projects':
             color: '#3c3c3c'
-            marginTop: '50px'
-            marginBottom: '-10px'
+            marginTop: '80px'
+            marginBottom: '10px'
 
         '.projectimage':
             width: '100vw'
@@ -370,3 +370,68 @@ module.exports = (api) ->
 
         '.new:hover h3':
             color: '#0274B8'
+
+        # TEAM: 
+
+        '.team-wrapper':
+            width: '80vw'
+            height: 'auto'
+            marginLeft: '10vw'
+            marginRight: '10vw'
+
+        '.person-card':
+            marginTop: '20px'
+            width: '18vw'
+            marginBottom: '30px'
+            float: 'left'
+            marginLeft: '1vw'
+            marginRight: '1vw'
+
+        '.person-card h2':
+            fontSize: '1.4vw'
+
+        '.person-card h5':
+            fontSize: '1.1vw'
+
+        '.person-img':
+            paddingLeft: 'auto !important'
+            paddingRight: 'auto !important'
+
+        '.avatar':
+            borderRadius: '50%'
+            width: '12vw'
+            height: '12vw'
+            marginLeft: '3vw'
+            position: 'relative'
+            float: 'center'
+
+        '.person-smedia':
+            WebkitBoxSizing: 'border-box'
+            MozBoxSizing: 'border-box'
+            boxSizing: 'border-box'
+            clear:'both'
+            width: '12vw'
+            marginLeft: 'auto'
+            marginRight: 'auto'
+            height: '30px'
+            marginBottom:'10px'
+            display:'inline-block'
+            float: 'right'
+
+        '.sm-row':
+            display: 'inline-block'
+            float: 'center'
+            marginLeft: '5px'
+
+        '.icon-person':
+            WebkitBoxSizing: 'border-box'
+            MozBoxSizing: 'border-box'
+            boxSizing: 'border-box'
+            width: '23px'
+            height: 'auto'
+            paddingLeft: '4px'
+            opacity: 0.5
+            float: 'center'
+
+        '.icon-person:hover':
+            opacity: 1
