@@ -79,12 +79,6 @@ module.exports = (api) ->
             lineHeight: '1.8'
             textAlign: 'center'
 
-        # 'a::selection':
-        #    color: '#fff'
-
-        # '::selection':
-        #     background: 'rgba(204,0,0,0.7)'
-
         # HEADER
          header:
             width: '100%'
@@ -287,3 +281,92 @@ module.exports = (api) ->
             height: 'auto'
             marginTop: '-40px'
             marginBottom: '-30px'
+
+        # FOOTER
+        '.footer':
+            width: '100vw'
+            height: '44vw'
+            backgroundColor: '#01446c'
+            position: 'relative'
+            marginTop: '30px'
+
+        '.network-nodes':
+            width: '100vw'
+            height: '30vw'
+            position: 'absolute'
+            top: 0
+            left: 0
+            backgroundColor: '#0274B8'
+
+        '.network-nodes h2':
+            color: '#fff'
+            marginTop: '30px'
+            marginBottom: '20px'
+
+        '.city':
+            width: '33.33333%'
+            float: 'left'
+
+        '.city h3':
+            color: '#fff'
+            textAlign: 'center'
+            fontFamily: 'Proxima Nova'
+            fontSize: '3.0vw'
+
+        '.city h6':
+            color: '#fff'
+            textAlign: 'center'
+            fontFamily: 'Proxima Nova'
+            fontWeight: '400'
+            fontSize: '1.2vw'
+            marginTop: '-30px'
+
+        '.join':
+            width: '6.5vw'
+            height: '2.2vw'
+            margin: '0 auto'
+            border: '0.1vw solid #fff'
+            borderRadius: '4px'
+            marginTop: '-20px'
+            transition: 'background-color 0.1s ease-in-out'
+            WebkitTransition: 'background-color 0.1s ease-in-out'
+
+        '.join h5':
+            color: '#fff'
+            lineHeight: '2.6'
+            fontFamily: 'Montserrat'
+            fontSize: '1.2vw'
+
+        '.join:hover':
+            backgroundColor: '#fff'
+            color: '#fff'
+            cursor: 'pointer'
+
+        '.join:hover h5':
+            color: '#0274B8'
+
+        '.new':
+            border: '0.2vw solid #fff'
+            borderRadius: '4px'
+            width: '14vw'
+            height: '3.6vw'
+            position: 'absolute'
+            bottom: '4vw'
+            left: 'calc(50% - 7vw)'
+            lineHeight: '0.4'
+            transition: 'background-color 0.1s ease-in-out'
+            WebkitTransition: 'background-color 0.1s ease-in-out'
+
+        '.new h3':
+            color: '#fff'
+            textAlign: 'center'
+            fontFamily: 'Montserrat'
+            fontSize: '1.4vw'
+
+        '.new:hover':
+            backgroundColor: '#fff'
+            color: '#fff'
+            cursor: 'pointer'
+
+        '.new:hover h3':
+            color: '#0274B8'

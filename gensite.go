@@ -67,6 +67,12 @@ type Project struct {
 	Button	 string
 }
 
+type Node struct {
+	City	 string
+	Area	 string
+	Link	 string
+}
+
 var Members = []*Person{
 	{
 		ID:       "tom",
@@ -210,6 +216,24 @@ var Projects = []*Project{
 	},
 }
 
+var Nodes = []*Node{
+	{
+		City: 	"London",
+		Area:	"Borough",
+		Link: 	"",
+	},
+	{
+		City:	"Chengdu",
+		Area:	"Jinjang",
+		Link:	"",
+	},
+	{
+		City:	"Beijing",
+		Area:	"Wangjing",
+		Link:	"",
+	},
+}
+
 
 func exit(args ...interface{}) {
 	if len(args) == 1 {
@@ -338,8 +362,24 @@ func genSite() {
 	// for _, members := range Members {
 	// 	renderPerson(members)
 	// }
-	// add renter team function
 	// FOOTER
+	o("<div class=footer>")
+	//// NETWORK NODES
+	o("<div class='network-nodes'>")
+	o("<h2>Nodes in our network</h2>")
+	renderNode := func(p *Node, next *Node) {
+		o("<div class=city>")
+		o("<h3>" + p.City + "</h3>")
+		o("<h6>" + p.Area + "</h6>")
+		o("<div class=join><h5>JOIN</h5></div>")
+		o("</div>")
+	}
+	for _, node := range Nodes {
+		renderNode(node, nil)
+	}
+	o("<div class=new><h3>Form a node</h3></div>")
+	o("</div>")
+	o("</div>")
 	// WRITE TO BUF
 	index = buf.Bytes()
 }
