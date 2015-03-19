@@ -282,113 +282,20 @@ module.exports = (api) ->
             marginTop: '-40px'
             marginBottom: '-30px'
 
-        # FOOTER
-        '.footer':
-            width: '100vw'
-            height: '44vw'
-            backgroundColor: '#01446c'
-            position: 'relative'
-            marginTop: '30px'
-            clear: 'both'
-
-        '.network-nodes':
-            width: '100vw'
-            height: '27vw'
-            position: 'absolute'
-            top: 0
-            left: 0
-            backgroundImage: 'url("/gfx/nodes-footer.png")'
-
-        '.network-nodes h2':
-            color: '#fff'
-            marginTop: '50px'
-            marginBottom: '10px'
-
-        '.city':
-            width: '33.33333%'
-            float: 'left'
-
-        '.city h3':
-            color: '#fff'
-            textAlign: 'center'
-            fontFamily: 'Proxima Nova'
-            fontSize: '3.0vw'
-
-        '.city h6':
-            color: '#fff'
-            textAlign: 'center'
-            fontFamily: 'Proxima Nova'
-            fontWeight: '400'
-            fontSize: '1.2vw'
-            marginTop: '-30px'
-
-        '.join':
-            width: '6.5vw'
-            height: '2.2vw'
-            margin: '0 auto'
-            border: '0.1vw solid #fff'
-            borderRadius: '4px'
-            marginTop: '-20px'
-            transition: 'background-color 0.1s ease-in-out'
-            WebkitTransition: 'background-color 0.1s ease-in-out'
-
-        '.join h5':
-            color: '#fff'
-            lineHeight: '2.6'
-            fontFamily: 'Montserrat'
-            fontSize: '1.2vw'
-
-        '.join:hover':
-            backgroundColor: '#fff'
-            color: '#fff'
-            cursor: 'pointer'
-
-        '.join:hover h5':
-            color: '#0274B8'
-
-        '.new':
-            border: '0.2vw solid #fff'
-            borderRadius: '4px'
-            width: '14vw'
-            height: '3.6vw'
-            position: 'absolute'
-            bottom: '3vw'
-            left: 'calc(50% - 7vw)'
-            lineHeight: '0.4'
-            transition: 'background-color 0.1s ease-in-out'
-            WebkitTransition: 'background-color 0.1s ease-in-out'
-
-        '.new h3':
-            color: '#fff'
-            textAlign: 'center'
-            fontFamily: 'Montserrat'
-            fontSize: '1.4vw'
-
-        '.new:hover':
-            backgroundColor: '#fff'
-            color: '#fff'
-            cursor: 'pointer'
-
-        '.new:hover h3':
-            color: '#0274B8'
-
-        # TEAM: 
-
+        # TEAM:
         '.team-wrapper':
-            width: '80vw'
+            width: '90vw'
             height: 'auto'
-            marginLeft: '10vw'
-            marginRight: '10vw'
+            margin: '0 auto'
             marginBottom: '40px'
-            display: 'inline-block'
 
         '.person-card':
             marginTop: '20px'
-            width: '18vw'
+            width: '20%'
             marginBottom: '30px'
             float: 'left'
-            marginLeft: '1vw'
-            marginRight: '1vw'
+            marginLeft: '2.5%'
+            marginRight: '2.5%'
 
         '.person-card h2':
             fontSize: '1.4vw'
@@ -438,3 +345,93 @@ module.exports = (api) ->
 
         '.icon-person:hover':
             opacity: 1
+
+        # FOOTER
+        '.footer':
+            width: '100vw'
+            height: '44vw'
+            backgroundColor: '#01446c'
+            position: 'relative'
+            marginTop: '30px'
+            clear: 'both'
+
+        '.network-nodes':
+            width: '100vw'
+            height: '27vw'
+            position: 'absolute'
+            top: 0
+            left: 0
+            backgroundImage: 'url("/gfx/nodes-footer.png")'
+
+        '.network-nodes h2':
+            color: '#fff'
+            marginTop: '40px'
+            marginBottom: '20px'
+
+        '.city':
+            width: '33.33333%'
+            float: 'left'
+
+        '.city h3':
+            color: '#fff'
+            textAlign: 'center'
+            fontFamily: 'Proxima Nova'
+            fontSize: '3.0vw'
+
+        '.city h6':
+            color: '#fff'
+            textAlign: 'center'
+            fontFamily: 'Proxima Nova'
+            fontWeight: '400'
+            fontSize: '1.2vw'
+            marginTop: '-2.2vw'
+
+        '.join':
+            width: '6.5vw'
+            height: '2.2vw'
+            margin: '0 auto'
+            border: '1px solid #fff'
+            borderRadius: '4px'
+            marginTop: '-1vw'
+            transition: 'background-color 0.1s ease-in-out'
+            WebkitTransition: 'background-color 0.1s ease-in-out'
+
+        '.join h5':
+            color: '#fff'
+            lineHeight: '2.6'
+            fontFamily: 'Montserrat'
+            fontSize: '1.2vw'
+
+        '.join:hover':
+            backgroundColor: '#fff'
+            color: '#fff'
+            cursor: 'pointer'
+
+        '.join:hover h5':
+            color: '#0274B8'
+
+        '.new':
+            border: '0.2vw solid #fff'
+            borderRadius: '4px'
+            width: '14vw'
+            height: '3.6vw'
+            position: 'absolute'
+            bottom: '3vw'
+            left: 'calc(50% - 7vw)'
+            lineHeight: '0.4'
+            transition: 'background-color 0.1s ease-in-out'
+            WebkitTransition: 'background-color 0.1s ease-in-out'
+
+        '.new h3':
+            color: '#fff'
+            textAlign: 'center'
+            fontFamily: 'Montserrat'
+            fontSize: '1.4vw'
+
+        '.new:hover':
+            backgroundColor: '#fff'
+            color: '#fff'
+            cursor: 'pointer'
+
+        '.new:hover h3':
+            color: '#0274B8'
