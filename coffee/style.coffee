@@ -204,7 +204,7 @@ module.exports = (api) ->
             height: 'auto'
 
         '.device-wrapper':
-            width: '80vw'
+            width: '65vw'
             margin: '0 auto'
             height: 'auto'
 
@@ -385,8 +385,8 @@ module.exports = (api) ->
             fontSize: '1.2vw'
             marginTop: '-2.2vw'
 
-        '.join':
-            width: '6.5vw'
+        '.contact':
+            width: '8vw'
             height: '2.2vw'
             margin: '0 auto'
             border: '1px solid #fff'
@@ -395,18 +395,18 @@ module.exports = (api) ->
             transition: 'background-color 0.1s ease-in-out'
             WebkitTransition: 'background-color 0.1s ease-in-out'
 
-        '.join h5':
+        '.contact h5':
             color: '#fff'
-            lineHeight: '2.6'
+            lineHeight: '2.8'
             fontFamily: 'Montserrat'
-            fontSize: '1.2vw'
+            fontSize: '1.1vw'
 
-        '.join:hover':
+        '.contact:hover':
             backgroundColor: '#fff'
             color: '#fff'
             cursor: 'pointer'
 
-        '.join:hover h5':
+        '.contact:hover h5':
             color: '#0274B8'
 
         '.new':
@@ -415,7 +415,7 @@ module.exports = (api) ->
             width: '14vw'
             height: '3.6vw'
             position: 'absolute'
-            bottom: '3vw'
+            bottom: '2vw'
             left: 'calc(50% - 7vw)'
             lineHeight: '0.4'
             transition: 'background-color 0.1s ease-in-out'
@@ -447,3 +447,19 @@ module.exports = (api) ->
             fontWeight: '600'
             color: '#3c3c3c'
             marginBottom: '10px'
+
+        '.join':
+            clear: 'both'
+            width: '100vw'
+            height: '17vw'
+            position: 'absolute'
+            bottom: 0
+            left: 0
+
+        '.join h2':
+           color: '#fff'
+            marginTop: '40px'
+            marginBottom: '20px'
+
+        '.join p':
+            color: 'white'

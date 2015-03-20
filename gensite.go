@@ -23,7 +23,7 @@ const (
 	tagline         = ""
 	cta             = ""
 	whatOne         = "We are an open innovation network of technologists, designers, architects and makers."                                                //WIP
-	whatTwo         = "At the nodes, we are building the systems and spaces that enable open and distributed collaboration on digital fabrication projects." //WIP
+	whatTwo         = "We are building systems and spaces that enable open and distributed collaboration on digital fabrication projects." //WIP
 )
 
 var index []byte
@@ -214,7 +214,7 @@ var Projects = []*Project{
 		GitHub:   "/wikifactory",
 		Twitter:  "wikifactory",
 		YouTube:  "WikifactoryMovement",
-		Text:     "On wikifactory.org we are developing a social collaboration platform for open design and hardware projects. Think \"github for design and hardware\" meets \"wikipedia of things\".<br><br>Features are both inspired by successful methodologies of open source software development, as well as contextualised to the processes of designing and producing physical objects.<br><br>We are starting with a community platform that deals with profiling of individuals and projects, hosting of design files and instructions as well as various discovery tools like aggregators and collections. Next steps can range from browser-based design and customisation tools to version control and componetisation, depending on the communities needs.",
+		Text:     "On wikifactory.org we are developing a social collaboration platform for open design and hardware projects. Think \"github for design and hardware\" meets \"wikipedia of things\".<br><br>Features are both inspired by successful methodologies of open source software development, and contextualised to the processes of designing and producing physical objects.<br><br>We are starting with a community platform that deals with profiling of individuals and projects, hosting of design files and instructions as well as various discovery tools like aggregators and collections. Next steps can range from browser-based design and customisation tools to version control and componetisation, depending on the communities needs.",
 		Image:    "",
 		CTA:      "Get early access",
 		Button:   "small-btn",
@@ -442,13 +442,18 @@ func genSite() {
 		o("<div class=city>")
 		o("<h3>" + p.City + "</h3>")
 		o("<h6>" + p.Area + "</h6>")
-		o("<div class=join><h5>JOIN</h5></div>")
+		o("<div class=contact><h5>CONTACT</h5></div>")
 		o("</div>")
 	}
 	for _, node := range Nodes {
 		renderNode(node, nil)
 	}
 	o("<div class=new><h3>Form a node</h3></div>")
+	o("</div>")
+	o("<div class=join>")
+	o("<h2>Join us</h2>")
+	o("<p>Our work can be adapted to different contexts around the world.<br><br>Help us reach to new locations and applications that could be solved through open innovation with digital fabrication.</p>")
+	o("</div>")
 	o("</div>")
 	o("</div>")
 	// WRITE TO BUF
