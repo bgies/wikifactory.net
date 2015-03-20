@@ -197,7 +197,6 @@ module.exports = (api) ->
         '.projectimage':
             width: '100vw'
             height: 'auto'
-            marginTop: '60px'
             marginBottom: '30px'
 
         '.projectimg':
@@ -435,3 +434,6 @@ module.exports = (api) ->
 
         '.new:hover h3':
             color: '#0274B8'
+
+        '.nodes-spacer':
+            marginTop: '40px'
