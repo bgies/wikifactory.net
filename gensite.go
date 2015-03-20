@@ -383,8 +383,10 @@ func genSite() {
 			o("<div class=" + p.Button + "><h3>" + p.CTA + "</h3></div>")
 		}
 		if p.Partners != "" {
-			o("<p>Partners</p>")
+			o("<div class='partners'>")
+			o("<h5>Partners</h5>")
 			o("<div class='partnersimage'><img class=partnerimg src=/gfx/partners/" + p.Partners + "></div>")
+			o("</div>")
 		}
 		if p.Divider != "" {
 			o("<div class='nodes-spacer'><img src=/gfx/" + p.Divider + "></div>")

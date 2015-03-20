@@ -437,3 +437,13 @@ module.exports = (api) ->
 
         '.nodes-spacer':
             marginTop: '40px'
+
+        '.partners':
+            marginTop: '60px'
+            marginBottom: '10px'
+
+        '.partners h5':
+            fontSize: '1.6vw'
+            fontWeight: '600'
+            color: '#3c3c3c'
+            marginBottom: '10px'
