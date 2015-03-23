@@ -363,14 +363,14 @@ module.exports = (api) ->
         '.footer':
             width: '100vw'
             height: '44vw'
-            backgroundColor: '#01446c'
+            backgroundColor: '#015486'
             position: 'relative'
             marginTop: '30px'
             clear: 'both'
 
         '.network-nodes':
             width: '100vw'
-            height: '29vw'
+            height: '32vw'
             position: 'absolute'
             top: 0
             left: 0
@@ -429,7 +429,7 @@ module.exports = (api) ->
             width: '14vw'
             height: '3.6vw'
             position: 'absolute'
-            bottom: '2vw'
+            bottom: '4vw'
             left: 'calc(50% - 7vw)'
             lineHeight: '0.4'
             transition: 'background-color 0.1s ease-in-out'
@@ -452,6 +452,9 @@ module.exports = (api) ->
         '.nodes-spacer':
             marginTop: '40px'
 
+        '.nodes-spacer img':
+            width: '100%'
+
         '.partners':
             marginTop: '60px'
             marginBottom: '10px'
@@ -462,17 +465,14 @@ module.exports = (api) ->
             color: '#3c3c3c'
             marginBottom: '10px'
 
-        '.join':
-            clear: 'both'
-            width: '100vw'
-            height: '17vw'
+        '.coded':
             position: 'absolute'
+            width: '100vw'
+            height: '3vw'
+            backgroundColor: '#01446c'
             bottom: 0
-            left: 0
 
-        '.join h2':
-           color: '#fff'
-           marginBottom: '20px'
-
-        '.join p':
-            color: 'white'
+        '.coded p':
+            color: '#fff'
+            fontSize: '1vw'
+            lineHeight: '1.2vw'

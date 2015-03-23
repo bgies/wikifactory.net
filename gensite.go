@@ -443,6 +443,7 @@ func genSite() {
 	o("</div>")
 	o("<div class=smedia>")
 	o("</div>")
+	o("<div class=coded><p>Made with <3 in London</p></div>")
 	o("</div>")
 	o("</div>")
 	// WRITE TO BUF
