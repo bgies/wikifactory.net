@@ -22,8 +22,8 @@ const (
 	outputDirectory = "www"
 	tagline         = ""
 	cta             = ""
-	whatOne         = "We are an open innovation network of technologists, designers, architects and makers."                                                //WIP
-	whatTwo         = "We are building systems and spaces that enable open and distributed collaboration on digital fabrication projects." //WIP
+	whatOne         = "We are an open innovation network of technologists, designers, architects and makers."
+	whatTwo         = "We are building the systems and spaces that enable open and distributed collaboration on design and hardware projects."
 )
 
 var index []byte
@@ -83,8 +83,7 @@ var Members = []*Person{
 		GitHub:   "salfield",
 		LinkedIn: "pub/tom-salfield/19/893/258",
 		Twitter:  "tsalfield",
-		// Text:     `Technical architect and software developer that is passionate about employing P2P and open source technologies to solve systemic problems and bring about a more open, sustainable economy.`,
-		Image: "tom.jpg",
+		Image:    "tom.jpg",
 	},
 	{
 		ID:       "christina",
@@ -93,8 +92,7 @@ var Members = []*Person{
 		GitHub:   "christinarebel",
 		LinkedIn: "in/christinarebel",
 		Twitter:  "christina_rebel",
-		// Text:     `Constantly building on her range of skillsets - from web development to illustration, strategic planning to video production, and more - to see social innovation projects through early stages and beyond.`,
-		Image: "christina.jpg",
+		Image:    "christina.jpg",
 	},
 	{
 		ID:       "max",
@@ -103,8 +101,7 @@ var Members = []*Person{
 		GitHub:   "mkampik",
 		LinkedIn: "in/maximiliankampik",
 		Twitter:  "mkampik",
-		//		Text:     `Technologist and aspiring futurist that enjoys keeping up with the latest tech innovations and implementations. Has a background in politics and international relations.`,
-		Image: "max.jpg",
+		Image:    "max.jpg",
 	},
 	{
 		ID:       "tav",
@@ -114,8 +111,7 @@ var Members = []*Person{
 		GitHub:   "tav",
 		LinkedIn: "in/asktav",
 		Twitter:  "tav",
-		//		Text:     `Systems designer, entrepreneur and aspiring polymath. Spends his time innovating on the cutting edge of social, economic and<br> technological systems.`,
-		Image: "tav.jpg",
+		Image:    "tav.jpg",
 	},
 	{
 		ID:       "nicolai",
@@ -123,8 +119,7 @@ var Members = []*Person{
 		Role:     "Business Development & Expansion",
 		LinkedIn: "pub/nicolai-peitersen/0/904/852",
 		Twitter:  "NPeitersen",
-		//		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
-		Image: "nicolai.jpg",
+		Image:    "nicolai.jpg",
 	},
 	{
 		ID:       "jimmy",
@@ -132,8 +127,7 @@ var Members = []*Person{
 		Role:     "Architecture & Design",
 		LinkedIn: "cn.linkedin.com/pub/jimmy-yeh/12/215/276/en",
 		Twitter:  "NPeitersen",
-		// Text:     `A Cornell trained architect with a passion in driving sustainable practices in the industry. `,
-		Image: "jimmy.jpg",
+		Image:    "jimmy.jpg",
 	},
 	{
 		ID:       "jonathan",
@@ -141,8 +135,7 @@ var Members = []*Person{
 		Role:     "Social Innovation & Strategy",
 		LinkedIn: "in/jonathanrobinson1",
 		Twitter:  "jon_ath_an",
-		//		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
-		Image: "jonathan.jpg",
+		Image:    "jonathan.jpg",
 	},
 	{
 		ID:       "ted",
@@ -150,16 +143,14 @@ var Members = []*Person{
 		Role:     "Planning & Operations",
 		LinkedIn: "in/theonlyted",
 		Twitter:  "theonlyted",
-		//		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
-		Image: "ted.jpg",
+		Image:    "ted.jpg",
 	},
 	{
 		ID:       "katy",
 		Name:     "Katy Marks",
 		Role:     "Architecture & Design",
 		LinkedIn: "pub/katy-marks/55/100/22",
-		//		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
-		Image: "katy.jpg",
+		Image:    "katy.jpg",
 	},
 	{
 		ID:       "jason",
@@ -343,32 +334,33 @@ func genSite() {
 	o("<img src=/gfx/w.png>")
 	o("<nav>")
 	o("<ul>")
-	o("<li><h4 class=cta>JOIN</h4></li>")
-	o("<li><h4>WHY</h4></li>")
-	o("<li><h4>WHO</h4></li>")
-	o("<li><h4>HOW</h4></li>")
-	o("<li><h4>WHAT</h4></li>")
+	o("<li><a href='#join'><h4 class=cta>JOIN</h4></a></li>")
+	o("<li><a href='#who'><h4>WHO</h4></a></li>")
+	o("<li><a href='#how'><h4>HOW</h4></a></li>")
+	o("<li><a href='#what'><h4>WHAT</h4></a></li>")
 	o("</ul>")
 	o("</nav>")
 	o("</header>")
 	// PARTICLES
+	o("<div class=tag id=home>")
 	o("<div id=particles-js><div><img src=/logo.png></img></div></div><div class=bounce><img class=arrow src=/gfx/arrow.png></img></div>")
 	o("<script src=" + getPath("site.js") + " async></script>")
 	o("<script src=http://vincentgarreau.com/particles.js/particles.js></script>")
+	o("</div>")
 	// WHAT
 	o("<div class=tag id=what>")
 	o("<div class=intro><h1>" + whatOne + "</h1></div>")
 	o("<div class=intro><h1>" + whatTwo + "</h1></div>")
 	o("</div>")
 	// HOW
-	o("<div class='nodes tag' id= how>")
+	o("<div class='nodes tag' id=how>")
 	o("<div class=nodes-text-one><h2>ONLINE<br>SOCIAL DESIGN PLATFORM</h2></div>")
 	o("<div class=nodes-text-two><h2>PHYSICAL<br>COLLABORATION SPACES</h2></div>")
 	o("<div class=nodes-text-three><h2>TRAINING<br>& WORKSHOPS</h2></div>")
 	o("<div class=nodes-text-four><h2>PROJECT<br>INCUBATION</h2></div>")
 	o("</div>")
 	//// PROJECTS
-	o("<div>")
+	o("<div class='projects-wrapper'>")
 	o("<h1 class=projects>Projects</h1>")
 	o("<div class=device-wrapper><img class=devices src=/gfx/devices.png></div>")
 	renderProject := func(p *Project, next *Project) {
@@ -398,7 +390,7 @@ func genSite() {
 		renderProject(project, nil)
 	}
 	o("</div>")
-	o("<div id=who>")
+	o("<div class=tag id=who>")
 	o("<div class='team-wrapper'>")
 	o("<h1 class=projects>Team</h1>")
 	renderPerson := func(p *Person) {
@@ -432,9 +424,8 @@ func genSite() {
 	}
 	o("</div>")
 	o("</div>")
-	// add renter team function
 	// FOOTER
-	o("<div class=footer>")
+	o("<div class='footer tag' id=join>")
 	//// NETWORK NODES
 	o("<div class='network-nodes'>")
 	o("<h2>Nodes in our network</h2>")
@@ -450,9 +441,7 @@ func genSite() {
 	}
 	o("<div class=new><h3>Form a node</h3></div>")
 	o("</div>")
-	o("<div class=join>")
-	o("<h2>Join us</h2>")
-	o("<p>Our work can be adapted to different contexts around the world.<br><br>Help us reach to new locations and applications that could be solved through open innovation with digital fabrication.</p>")
+	o("<div class=smedia>")
 	o("</div>")
 	o("</div>")
 	o("</div>")

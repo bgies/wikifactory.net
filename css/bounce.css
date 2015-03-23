@@ -4,6 +4,7 @@
     height: 50px;
     position: absolute;
     margin-left: calc(50% - 25px);
+    margin-bottom: 1vw;
     -webkit-animation: bounce 1.5s infinite;
 }
 

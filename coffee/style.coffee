@@ -79,6 +79,9 @@ module.exports = (api) ->
             lineHeight: '1.8'
             textAlign: 'center'
 
+        a:
+            textDecoration: 'none'
+
         # HEADER
          header:
             width: '100%'
@@ -130,7 +133,6 @@ module.exports = (api) ->
             backgroundColor: '#0274B8' # Wikifactory Blue.
             color: '#ffffff'
             height: '98vh'
-            marginBottom: '30px'
 
         '#particles-js div':
             width: '780px'
@@ -149,6 +151,11 @@ module.exports = (api) ->
             position: 'absolute'
 
         # WHAT
+        '#what':
+            height: '28vw'
+            paddingTop: '2vw'
+            backgroundColor: '#fff'
+
         '.intro':
             width: '80vw'
             margin: '0 auto'
@@ -163,6 +170,7 @@ module.exports = (api) ->
             marginBottom: '40px'
             backgroundImage: 'url("/gfx/nodes.png")'
             position: 'relative'
+            top: '-3vw'
 
         'div.nodes-text-one':
             width: '30%'
@@ -189,9 +197,15 @@ module.exports = (api) ->
             right: '20vw'
 
         # PROJECTS
+
+        '.projects-wrapper':
+            backgroundColor: '#fff'
+            display: 'inline-block'
+            width: '100vw'
+
         '.projects':
             color: '#3c3c3c'
-            marginTop: '80px'
+            marginTop: '20px'
             marginBottom: '10px'
 
         '.projectimage':
@@ -356,7 +370,7 @@ module.exports = (api) ->
 
         '.network-nodes':
             width: '100vw'
-            height: '27vw'
+            height: '29vw'
             position: 'absolute'
             top: 0
             left: 0
@@ -458,8 +472,7 @@ module.exports = (api) ->
 
         '.join h2':
            color: '#fff'
-            marginTop: '40px'
-            marginBottom: '20px'
+           marginBottom: '20px'
 
         '.join p':
             color: 'white'
