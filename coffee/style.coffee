@@ -230,6 +230,86 @@ module.exports = (api) ->
             width: '70vw'
             margin: '0 auto'
 
+        '.form':
+            width: '30vw'
+            margin: '0 auto'
+
+        '.access, .contactname, .contactemail, .contactsubject, .contactmessage':
+            width: '30vw'
+            padding: '1vw 1.5vw'
+            fontFamily: 'Proxima Nova'
+            fontSize: '1.2vw'
+            color: '#6e6e6e'
+            border: '1px solid #d0d0d0'
+            marginTop: '1vw'
+
+        '.contactname, .contactemail, .contactsubject, .contactmessage':
+            width: '26vw !important'
+            marginLeft: '1vw'
+
+        '.submit':
+            border: '0.2vw solid #0274B8'
+            borderRadius: '4px'
+            width: '16vw'
+            height: '3.6vw'
+            marginLeft: '7vw'
+            marginTop: '1vw'
+            backgroundColor: '#fff'
+            fontFamily: 'Montserrat'
+            fontSize: '1.4vw'
+            color: '#0274B8'
+            transition: 'background-color 0.1s ease-in-out'
+            WebkitTransition: 'background-color 0.1s ease-in-out'
+
+        'input[type=text]:focus':
+            outline: 'none'
+            border: '1px solid #0274B8'
+
+        '.submit:hover':
+            backgroundColor: '#0274B8'
+            color: '#fff'
+            cursor: 'pointer'
+
+        '.submit:hover h3':
+            color: '#fff'
+
+        '.thankyou':
+            width: '35vw'
+            height: '11vw'
+            backgroundColor: '#fff'
+            marginTop: '-10vw'
+            position: 'absolute'
+            left: 'calc(50% - 17.5vw)'
+            visibility: 'hidden'
+
+        'div.thankyou.visible':
+            visibility: 'visible'
+
+        '.tiny-wrapper':
+            width: '18vw'
+            margin: '0 auto'
+            marginTop: '10px'
+
+        '.tiny-btn, .tiny-submit':
+            float: 'left'
+            border: '0.2vw solid #0274B8'
+            marginRight: '1vw'
+            borderRadius: '4px'
+            backgroundColor: '#fff'
+            width: '8vw'
+            height: '2.6vw'
+            lineHeight: '0.1'
+            transition: 'background-color 0.1s ease-in-out'
+            WebkitTransition: 'background-color 0.1s ease-in-out'
+
+        '.tiny-btn h3':
+            fontSize: '1.1vw'
+
+        'button.tiny-submit':
+            fontFamily: 'Montserrat'
+            color: '#0274B8'
+            fontSize: '1.1vw'
+
         '.small-btn':
             border: '0.2vw solid #0274B8'
             borderRadius: '4px'
@@ -240,12 +320,18 @@ module.exports = (api) ->
             transition: 'background-color 0.1s ease-in-out'
             WebkitTransition: 'background-color 0.1s ease-in-out'
 
-        '.small-btn:hover':
+        '.small-btn:hover, .tiny-btn:hover, .tiny-submit:hover':
             backgroundColor: '#0274B8'
             color: '#fff'
             cursor: 'pointer'
 
         '.small-btn:hover h3':
+            color: '#fff'
+
+        '.tiny-btn:hover h3':
+            color: '#fff'
+
+        '.tiny-submit:hover h3':
             color: '#fff'
 
         '.medium-btn':
@@ -465,6 +551,26 @@ module.exports = (api) ->
             color: '#3c3c3c'
             marginBottom: '10px'
 
+        '.smedia':
+            width: '60vw'
+            left: 'calc(50% - 30vw)'
+            position: 'absolute'
+            top: '35vw'
+            height: '6vw'
+
+        '.smedia-icon':
+            width: '25%'
+            float: 'left'
+            textAlign: 'center'
+
+        '.smedia-icon img':
+            width: '20%'
+            height: 'auto'
+
+        '.smedia-icon img:hover':
+            cursor: 'pointer'
+            opacity: '0.8'
+
         '.coded':
             position: 'absolute'
             width: '100vw'
@@ -476,3 +582,29 @@ module.exports = (api) ->
             color: '#fff'
             fontSize: '1vw'
             lineHeight: '1.2vw'
+
+        '.contactform':
+            position: 'fixed'
+            width: '28vw'
+            height: '40vw'
+            left: 'calc(50% - 14vw)'
+            backgroundColor: '#fff'
+            top: '80px'
+            borderRadius: '7px'
+            boxShadow: '0 6px 6px rgba(0,0,0,0.15)'
+            visibility: 'hidden'
+            transition: 'visibility 1s ease-in-out'
+            WebkitTransition: 'visibility 1s ease-in-out'
+
+        '.contactform h3':
+            marginBottom: '0px'
+
+        'div.contactform.visible':
+            visibility: 'visible'
+
+        'textarea:focus':
+            outline: 'none'
+            border: '1px solid #0274B8'
+
+        'textarea.contactmessage':
+            height: '18vw'

@@ -4,6 +4,8 @@
 package wikifactory
 
 import (
+	"appengine"
+	"appengine/datastore"
 	"bytes"
 	"encoding/json"
 	"fmt"
@@ -64,6 +66,7 @@ type Project struct {
 	Area     string
 	YouTube  string
 	Partners string
+	Form     bool
 	CTA      string
 	Button   string
 	Divider  string
@@ -75,13 +78,24 @@ type Node struct {
 	Link string
 }
 
+type Signup struct {
+	Email string
+}
+
+type Contact struct {
+	Name    string
+	Email   string
+	Subject string
+	Message string
+}
+
 var Members = []*Person{
 	{
 		ID:       "tom",
 		Name:     "Tom Salfield",
 		Role:     "Systems Developer & Strategy",
 		GitHub:   "salfield",
-		LinkedIn: "pub/tom-salfield/19/893/258",
+		LinkedIn: "https://www.linkedin.com/pub/tom-salfield/19/893/258",
 		Twitter:  "tsalfield",
 		Image:    "tom.jpg",
 	},
@@ -90,16 +104,16 @@ var Members = []*Person{
 		Name:     "Christina Rebel",
 		Role:     "Strategy & Business Development",
 		GitHub:   "christinarebel",
-		LinkedIn: "in/christinarebel",
+		LinkedIn: "https://www.linkedin.com/in/christinarebel",
 		Twitter:  "christina_rebel",
 		Image:    "christina.jpg",
 	},
 	{
 		ID:       "max",
 		Name:     "Maximilian Kampik",
-		Role:     "Technology & User Experience",
+		Role:     "Technology & Innovation",
 		GitHub:   "mkampik",
-		LinkedIn: "in/maximiliankampik",
+		LinkedIn: "https://www.linkedin.com/in/maximiliankampik",
 		Twitter:  "mkampik",
 		Image:    "max.jpg",
 	},
@@ -109,7 +123,7 @@ var Members = []*Person{
 		Role:     "Systems Designer & Innovation",
 		Link:     "http://tav.espians.com/",
 		GitHub:   "tav",
-		LinkedIn: "in/asktav",
+		LinkedIn: "https://www.linkedin.com/in/asktav",
 		Twitter:  "tav",
 		Image:    "tav.jpg",
 	},
@@ -117,7 +131,7 @@ var Members = []*Person{
 		ID:       "nicolai",
 		Name:     "Nicolai Peitersen",
 		Role:     "Business Development & Expansion",
-		LinkedIn: "pub/nicolai-peitersen/0/904/852",
+		LinkedIn: "https://www.linkedin.com/pub/nicolai-peitersen/0/904/852",
 		Twitter:  "NPeitersen",
 		Image:    "nicolai.jpg",
 	},
@@ -126,14 +140,14 @@ var Members = []*Person{
 		Name:     "Jimmy Yeh",
 		Role:     "Architecture & Design",
 		LinkedIn: "cn.linkedin.com/pub/jimmy-yeh/12/215/276/en",
-		Twitter:  "NPeitersen",
+		Twitter:  "",
 		Image:    "jimmy.jpg",
 	},
 	{
 		ID:       "jonathan",
 		Name:     "Jonathan Robinson",
 		Role:     "Social Innovation & Strategy",
-		LinkedIn: "in/jonathanrobinson1",
+		LinkedIn: "https://www.linkedin.com/in/jonathanrobinson1",
 		Twitter:  "jon_ath_an",
 		Image:    "jonathan.jpg",
 	},
@@ -141,7 +155,7 @@ var Members = []*Person{
 		ID:       "ted",
 		Name:     "Ted Maxwell",
 		Role:     "Planning & Operations",
-		LinkedIn: "in/theonlyted",
+		LinkedIn: "https://www.linkedin.com/in/theonlyted",
 		Twitter:  "theonlyted",
 		Image:    "ted.jpg",
 	},
@@ -149,7 +163,7 @@ var Members = []*Person{
 		ID:       "katy",
 		Name:     "Katy Marks",
 		Role:     "Architecture & Design",
-		LinkedIn: "pub/katy-marks/55/100/22",
+		LinkedIn: "https://www.linkedin.com/pub/katy-marks/55/100/22",
 		Image:    "katy.jpg",
 	},
 	{
@@ -205,9 +219,10 @@ var Projects = []*Project{
 		GitHub:   "/wikifactory",
 		Twitter:  "wikifactory",
 		YouTube:  "WikifactoryMovement",
-		Text:     "On wikifactory.org we are developing a social collaboration platform for open design and hardware projects. Think \"github for design and hardware\" meets \"wikipedia of things\".<br><br>Features are both inspired by successful methodologies of open source software development, and contextualised to the processes of designing and producing physical objects.<br><br>We are starting with a community platform that deals with profiling of individuals and projects, hosting of design files and instructions as well as various discovery tools like aggregators and collections. Next steps can range from browser-based design and customisation tools to version control and componetisation, depending on the communities needs.",
+		Text:     "On wikifactory.org we are developing a social collaboration platform for open design and hardware projects. Think \"github for design and hardware\" meets \"wikipedia of things\".<br><br>Features are both inspired by successful methodologies of open source software development, and contextualised to the processes of designing and producing physical objects.<br><br><b>Want early access?</b><br>The more feedback we can get, the faster we can improve features for our community. If you'd like to get early access and help shape the platform, please enter your email below.",
 		Image:    "",
-		CTA:      "Get early access",
+		Form:     true,
+		CTA:      "",
 		Button:   "small-btn",
 		Divider:  "nodes-spacer-1.jpg",
 	},
@@ -241,7 +256,7 @@ var Projects = []*Project{
 	},
 	{
 		Title:    "WikiHouse China - Rooftop 1.0 @ iBOX Chengdu",
-		Link:     "",
+		Link:     "http://www.wikihouse.cc",
 		Status:   "Launching Q2 2015",
 		GitHub:   "",
 		Twitter:  "",
@@ -371,7 +386,19 @@ func genSite() {
 		o("<h2>" + p.Title + "</h2>")
 		o("<h5>" + p.Status + "</h5>")
 		o("<div class=text><p>" + p.Text + "</p></div>")
-		if p.CTA != "" {
+		if p.Form == true {
+			o("<div>")
+			o("<form action=signup method=post class=form>")
+			o("<input class=access type=text placeholder=Email name=email></input><br><br>")
+			o("<button type=submit class=submit>Get early access</button>")
+			o("</form>")
+			o("<div class='thankyou'><h3>Thanks!</h3><p>We will notify you when the beta goes live.</p></div>")
+			o("</div>")
+		}
+		if p.CTA != "" && p.Link != "" {
+			o("<div class=" + p.Button + "><a href=" + p.Link + "><h3>" + p.CTA + "</h3></a></div>")
+		}
+		if p.CTA != "" && p.Link != "http://www.wikihouse.cc" {
 			o("<div class=" + p.Button + "><h3>" + p.CTA + "</h3></div>")
 		}
 		if p.Partners != "" {
@@ -408,7 +435,7 @@ func genSite() {
 			o("<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img class=icon-person src=gfx/icons/twitter.png>" + "</a>")
 		}
 		if p.LinkedIn != "" {
-			o("<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img class=icon-person src=gfx/icons/linkedin.png>" + "</a>")
+			o("<a target=_blank href=" + p.LinkedIn + ">" + "<img class=icon-person src=gfx/icons/linkedin.png>" + "</a>")
 		}
 		if p.Skype != "" {
 			o("<a target=_blank href=" + p.Skype + ">" + "<img class=icon-person src=gfx/icons/skype.png>" + "</a>")
@@ -442,8 +469,24 @@ func genSite() {
 	o("<div class=new><h3>Form a node</h3></div>")
 	o("</div>")
 	o("<div class=smedia>")
+	o("<div class='smedia-icon'><a href='https://twitter.com/wikifactory' target='_blank'><img src=/gfx/icons/twitter-white.png></a></div>")
+	o("<div class='smedia-icon'><a href='https://facebook.com/wikifactory' target='_blank'><img src=/gfx/icons/facebook-white.png></a></div>")
+	o("<div class='smedia-icon'><a href='https://github.com/wikifactory' target='_blank'><img src=/gfx/icons/github-white.png></a></div>")
+	o("<div class='smedia-icon'><a href='https://www.linkedin.com/company/wikifactory' target='_blank'><img src=/gfx/icons/linkedin-white.png></a></div>")
 	o("</div>")
-	o("<div class=coded><p>Made with <3 in London</p></div>")
+	o("<div class=coded><p>Coded with <3 in London</p></div>")
+	o("</div>")
+	// CONTACT FORM
+	o("<div class='contactform'>")
+	o("<h3>Contact us</h3>")
+	o("<form action=contact method=post>")
+	o("<input class=contactname type=text placeholder=Name name=name></input><br>")
+	o("<input class=contactemail type=text placeholder=Email name=email></input><br>")
+	o("<input class=contactsubject type=text placeholder=Subject name=subject></input><br>")
+	o("<textarea class=contactmessage type=textarea placeholder=Message name=message></textarea><br>")
+	o("<div class='tiny-wrapper'><div class='tiny-btn cancel'><h3>Cancel</h3></div>")
+	o("<button type=submit class='tiny-submit'>Submit</button></div>")
+	o("</form>")
 	o("</div>")
 	o("</div>")
 	// WRITE TO BUF
@@ -451,6 +494,31 @@ func genSite() {
 }
 func handleIndex(w http.ResponseWriter, r *http.Request) {
 	w.Write(index)
+}
+func handleContact(w http.ResponseWriter, r *http.Request) {
+	c := appengine.NewContext(r)
+	s := Contact{
+		Email:   r.FormValue("email"),
+		Name:    r.FormValue("name"),
+		Subject: r.FormValue("subject"),
+		Message: r.FormValue("message"),
+	}
+	_, err := datastore.Put(c, datastore.NewIncompleteKey(c, "contact", nil), &s)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+func handleSignup(w http.ResponseWriter, r *http.Request) {
+	c := appengine.NewContext(r)
+	s := Signup{
+		Email: r.FormValue("email"),
+	}
+	_, err := datastore.Put(c, datastore.NewIncompleteKey(c, "signup", nil), &s)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 }
 func handleLogo(w http.ResponseWriter, req *http.Request) {
 	clr := image.NewUniform(color.RGBA{53, 44, 37, 255})
@@ -472,4 +540,6 @@ func init() {
 	genSite()
 	http.HandleFunc("/logo.png", handleLogo)
 	http.HandleFunc("/", handleIndex)
+	http.HandleFunc("/signup", handleSignup)
+	http.HandleFunc("/contact", handleContact)
 }
