@@ -6,6 +6,7 @@ package wikifactory
 import (
 	"appengine"
 	"appengine/datastore"
+	// "appengine/mail"
 	"bytes"
 	"encoding/json"
 	"fmt"
@@ -70,12 +71,13 @@ type Project struct {
 	CTA      string
 	Button   string
 	Divider  string
+	Email    string
 }
 
 type Node struct {
-	City string
-	Area string
-	Link string
+	City  string
+	Area  string
+	Email string
 }
 
 type Signup struct {
@@ -87,6 +89,7 @@ type Contact struct {
 	Email   string
 	Subject string
 	Message string
+	EmailTo string
 }
 
 var Members = []*Person{
@@ -117,16 +120,16 @@ var Members = []*Person{
 		Twitter:  "mkampik",
 		Image:    "max.jpg",
 	},
-	{
-		ID:       "tav",
-		Name:     "tav",
-		Role:     "Systems Designer & Innovation",
-		Link:     "http://tav.espians.com/",
-		GitHub:   "tav",
-		LinkedIn: "https://www.linkedin.com/in/asktav",
-		Twitter:  "tav",
-		Image:    "tav.jpg",
-	},
+	// {
+	// 	ID:       "tav",
+	// 	Name:     "tav",
+	// 	Role:     "Systems Designer & Innovation",
+	// 	Link:     "http://tav.espians.com/",
+	// 	GitHub:   "tav",
+	// 	LinkedIn: "https://www.linkedin.com/in/asktav",
+	// 	Twitter:  "tav",
+	// 	Image:    "tav.jpg",
+	// },
 	{
 		ID:       "nicolai",
 		Name:     "Nicolai Peitersen",
@@ -219,7 +222,7 @@ var Projects = []*Project{
 		GitHub:   "/wikifactory",
 		Twitter:  "wikifactory",
 		YouTube:  "WikifactoryMovement",
-		Text:     "On wikifactory.org we are developing a social collaboration platform for open design and hardware projects. Think \"github for design and hardware\" meets \"wikipedia of things\".<br><br>Features are both inspired by successful methodologies of open source software development, as well as contextualised to the processes of designing and producing physical objects.<br><br><b>Want early access?</b><br>The more feedback we can get, the faster we can improve features for our community. If you'd like to get early access and help shape the platform, please enter your email below.",
+		Text:     "On wikifactory.org we are developing a social collaboration platform for open design and hardware projects. Think \"github for design and hardware\" meets \"wikipedia of things\".<br><br>Features are both inspired by successful methodologies of open source software development, as well as contextualised to the processes of designing and producing physical objects.<br><br><b>Want early access?</b><br>The more feedback we can get, the faster we can improve our features for the community. If you'd like to get early access and help shape the platform, please enter your email below.",
 		Image:    "",
 		Form:     true,
 		CTA:      "",
@@ -239,6 +242,7 @@ var Projects = []*Project{
 		CTA:      "Start a Wikifactory in your city",
 		Button:   "large-btn",
 		Divider:  "nodes-spacer-2.jpg",
+		Email:    "max@wikifactory.org",
 	},
 	{
 		Title:    "Printing the Future",
@@ -253,6 +257,7 @@ var Projects = []*Project{
 		CTA:      "Partner with us",
 		Button:   "small-btn",
 		Divider:  "nodes-spacer-3.jpg",
+		Email:    "max@wikifactory.org",
 	},
 	{
 		Title:    "WikiHouse China - Rooftop 1.0 @ iBOX Chengdu",
@@ -284,19 +289,19 @@ var Projects = []*Project{
 
 var Nodes = []*Node{
 	{
-		City: "London",
-		Area: "Borough",
-		Link: "",
+		City:  "London",
+		Area:  "Borough",
+		Email: "max@wikifactory.org",
 	},
 	{
-		City: "Chengdu",
-		Area: "Jinjang",
-		Link: "",
+		City:  "Chengdu",
+		Area:  "Jinjang",
+		Email: "max@wikifactory.org",
 	},
 	{
-		City: "Beijing",
-		Area: "Wangjing",
-		Link: "",
+		City:  "Beijing",
+		Area:  "Wangjing",
+		Email: "max@wikifactory.org",
 	},
 }
 
@@ -399,7 +404,7 @@ func genSite() {
 			o("<div class=" + p.Button + "><a href=" + p.Link + "><h3>" + p.CTA + "</h3></a></div>")
 		}
 		if p.CTA != "" && p.Link != "http://www.wikihouse.cc" {
-			o("<div class=" + p.Button + "><h3>" + p.CTA + "</h3></div>")
+			o("<div id=" + p.Email + " class=" + p.Button + "><h3>" + p.CTA + "</h3></div>")
 		}
 		if p.Partners != "" {
 			o("<div class='partners'>")
@@ -460,13 +465,13 @@ func genSite() {
 		o("<div class=city>")
 		o("<h3>" + p.City + "</h3>")
 		o("<h6>" + p.Area + "</h6>")
-		o("<div class=contact><h5>CONTACT</h5></div>")
+		o("<div id=" + p.Email + " class=contact><h5>CONTACT</h5></div>")
 		o("</div>")
 	}
 	for _, node := range Nodes {
 		renderNode(node, nil)
 	}
-	o("<div class=new><h3>Form a node</h3></div>")
+	o("<div id='form-a-node' class=new><h3>Form a node</h3></div>")
 	o("</div>")
 	o("<div class=smedia>")
 	o("<div class='smedia-icon'><a href='https://twitter.com/wikifactory' target='_blank'><img src=/gfx/icons/twitter-white.png></a></div>")
@@ -492,6 +497,21 @@ func genSite() {
 	// WRITE TO BUF
 	index = buf.Bytes()
 }
+
+// EMAIL NOTIFICATIONS
+// func Notification(w http.ResponseWriter, r *http.Request) {
+// 	c := appengine.NewContext(r)
+// 	addr := r.FormValue("emailto")
+// 	msg := &mail.Message{
+// 		Sender:  "Wikifactory <team@wikifactory.org>",
+// 		To:      []string{addr},
+// 		Subject: "" + r.FormValue("subject"),
+// 		Body:    r.FormValue("message"),
+// 	}
+// 	if err := mail.Send(c, msg); err != nil {
+// 		c.Errorf("Couldn't send email: %v", err)
+// 	}
+// }
 func handleIndex(w http.ResponseWriter, r *http.Request) {
 	w.Write(index)
 }
@@ -502,6 +522,7 @@ func handleContact(w http.ResponseWriter, r *http.Request) {
 		Name:    r.FormValue("name"),
 		Subject: r.FormValue("subject"),
 		Message: r.FormValue("message"),
+		EmailTo: r.FormValue("emailto"),
 	}
 	_, err := datastore.Put(c, datastore.NewIncompleteKey(c, "contact", nil), &s)
 	if err != nil {
