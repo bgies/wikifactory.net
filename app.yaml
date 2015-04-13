@@ -13,5 +13,7 @@ handlers:
   static_files: gfx/favicon.ico
   upload: gfx/favicon.ico
   expiration: "1d"
+- url: /lib
+  static_dir: lib
 - url: /.*
   script: _go_app

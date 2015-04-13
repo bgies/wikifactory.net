@@ -365,7 +365,7 @@ func genSite() {
 	o("<div class=tag id=home>")
 	o("<div id=particles-js><div><img src=/logo.png></img></div></div><div class=bounce><img class=arrow src=/gfx/arrow.png></img></div>")
 	o("<script src=" + getPath("site.js") + " async></script>")
-	o("<script src=http://vincentgarreau.com/particles.js/particles.js></script>")
+	o("<script src=/lib/particles.js></script>")
 	o("</div>")
 	// WHAT
 	o("<div class=tag id=what>")
