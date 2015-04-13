@@ -162,13 +162,13 @@ var Members = []*Person{
 		Twitter:  "theonlyted",
 		Image:    "ted.jpg",
 	},
-	{
-		ID:       "katy",
-		Name:     "Katy Marks",
-		Role:     "Architecture & Design",
-		LinkedIn: "https://www.linkedin.com/pub/katy-marks/55/100/22",
-		Image:    "katy.jpg",
-	},
+	// {
+	// 	ID:       "katy",
+	// 	Name:     "Katy Marks",
+	// 	Role:     "Architecture & Design",
+	// 	LinkedIn: "https://www.linkedin.com/pub/katy-marks/55/100/22",
+	// 	Image:    "katy.jpg",
+	// },
 	{
 		ID:       "jason",
 		Name:     "Jason Tang",
