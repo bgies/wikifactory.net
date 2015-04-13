@@ -8,7 +8,7 @@ This is the organisational website for Wikifactory Ltd.
 
 2.) Assuming you have [Python] (https://www.python.org/downloads/) 2.7.9 or 3.4 plus, install [Assetgen] (https://github.com/tav/assetgen) by running: 
 
-    pip install https://pypi.python.org/packages/source/a/assetgen/assetgen-0.3.7.tar.gz
+    pip install assetgen
 
 3.) Install freetype-go with: `go get code.google.com/p/freetype-go/freetype`.
 
